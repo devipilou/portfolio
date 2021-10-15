@@ -1,0 +1,3 @@
+[submodule "pilou_art"]
+	path = pilou_art
+	url = https://github.com/devipilou/pilou_art.git
