@@ -1,41 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio de Pierre-Loup Perez</title>
-</head>
-<body>
-    <main>
-        <h1>Portfolio de Pierre-Loup Perez</h1>
-        <article>
-            <h2 class="titre-article">
-                <a href="/pages/projets.html">Projets</a>
-            </h2>
-            <ul class="contenu-article">
-                <li>
-                    <a href="/pilou_art/index.html">Galerie d'art de Pilou-Art by Pilou</a>
-                </li>
-                <li>           
-                    <a href="https://maitressege.fr">Le blog de Maitresse Gé</a>
-                </li>
-            </ul>
-        </article>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/spacelab/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Pl Perez</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor03"
+          aria-controls="navbarColor03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <article class="titre-article">
-            <h2>
-                <a href="/pages/presentation.html">Présentation</a>        
-            </h2>
-            <p class="contenu-article">texte</p>
-        </article>
-        
-        <article class="titre-article">
-            <h2>
-                <a href="/pages/cv.html">Curriculum Vitae</a>        
-            </h2>
-            <p class="contenu-article">texte</p>
-        </article>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                >Accueil
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/projets.html">Projets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/presentation.html"
+                >Présentation</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/cv.html">Curriculum Vitae</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-sm-2"
+              type="text"
+              placeholder="Rechercher"
+            />
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+              Rechercher
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <h1>Portfolio de Pierre-Loup Perez</h1>
+      <article>
+        <h2 class="titre-article">
+          <a href="/pages/projets.html">Projets</a>
+        </h2>
+        <ul class="contenu-article">
+          <li>
+            <a href="/pilou_art/">Galerie d'art de Pilou-Art by Pilou</a>
+          </li>
+          <li>
+            <a href="https://maitressege.fr">Le blog de Maitresse Gé</a>
+          </li>
+        </ul>
+      </article>
+
+      <article class="titre-article">
+        <h2>
+          <a href="/pages/presentation.html">Présentation</a>
+        </h2>
+        <p class="contenu-article">texte</p>
+      </article>
+
+      <article class="titre-article">
+        <h2>
+          <a href="/pages/cv.html">Curriculum Vitae</a>
+        </h2>
+        <p class="contenu-article">texte</p>
+      </article>
     </main>
-</body>
+  </body>
 </html>
