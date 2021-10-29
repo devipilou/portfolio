@@ -8,14 +8,20 @@
     <link
       rel="stylesheet"
       href="https://bootswatch.com/5/spacelab/bootstrap.min.css"
-    />
+      />
     <link rel="stylesheet" href="/styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.36.0/tsparticles.min.js"></script>
+    <script src="/js/app.js" defer></script>
   </head>
   <body>
+    
+    <!-- fond particules -->
+    <div id="tsparticles"></div>
+    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand text-primary" href="../index.html">Pl Perez</a>
+        <a class="navbar-brand text-primary" href="index.html">Perez Pl</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -49,9 +55,12 @@
         </div>
       </div>
     </nav>
+    
 
+    <!-- Main -->
+    <main class="container">
      <!-- Header -->
-     <header class="text-center">
+     <header class="text-center border border-light">
         <figure class="text-intro">
           <blockquote class="blockquote">
             <h1 class="mb-2 text-primary">Projets Web</h1>
@@ -61,6 +70,7 @@
           </figcaption>
         </figure>
       </header>
+    </main>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

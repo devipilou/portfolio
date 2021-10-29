@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Présentation de Pierre-Loup Perez - Développeur Web</title>
+    <title>Curriculum Vitae - Pierre-Loup Perez</title>
     <link
       rel="stylesheet"
       href="https://bootswatch.com/5/spacelab/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/styles/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.36.0/tsparticles.min.js"></script>
+    <script src="js/app.js" defer></script>
   </head>
   <body>
+
+    <!-- fond particules -->
+    <div id="tsparticles"></div>
+    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand text-primary" href="../index.html">Pl Perez</a>
+        <a class="navbar-brand text-primary" href="index.html">Perez Pl</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,36 +37,40 @@
         <div class="collapse navbar-collapse" id="navbarColor03">
           <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
-              <a class="nav-link" href="../index.html"> Accueil </a>
+              <a class="nav-link" href="index.html">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="projets.html">Projets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="presentation.html">
-                Présentation
-                <span class="visually-hidden">(current)</span>
-              </a>
+              <a class="nav-link" href="presentation.html">Présentation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cv.html">Curriculum Vitae</a>
+              <a class="nav-link active" href="cv.html">
+                Curriculum Vitae
+                <span class="visually-hidden">(current)</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
+
+    <main class="container">
      <!-- Header -->
-     <header class="text-center">
+     <header class="text-center border border-light">
         <figure class="text-intro">
           <blockquote class="blockquote">
-            <h1 class="mb-2 text-primary">Présentation</h1>
+            <h1 class="mb-2 text-primary">Curriculum Vitae</h1>
           </blockquote>
           <figcaption class="blockquote-footer text-dark">
             de <cite title="Source Title">Pierre-Loup Perez</cite>
           </figcaption>
         </figure>
       </header>
+    </main>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

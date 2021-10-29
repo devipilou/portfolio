@@ -10,12 +10,18 @@
       href="https://bootswatch.com/5/spacelab/bootstrap.min.css"
     />
     <link rel="stylesheet" href="/styles/style.css" />
-  </head>
-  <body>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.36.0/tsparticles.min.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <!-- fond particules -->
+    <div id="tsparticles"></div>
+    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand text-primary" href="#">Pl Perez</a>
+        <a class="navbar-brand text-primary" href="#">Perez Pl</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,26 +43,27 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/projets.html">Projets</a>
+              <a class="nav-link" href="projets.html">Projets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/presentation.html"
+              <a class="nav-link" href="presentation.html"
                 >Présentation</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/cv.html">Curriculum Vitae</a>
+              <a class="nav-link" href="cv.html">Curriculum Vitae</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
+
     <!-- Main -->
     <main class="container">
 
         <!-- Header -->
-      <header class="text-center">
+      <header class="text-center border border-light">
         <figure class="text-intro">
           <blockquote class="blockquote">
             <h1 class="mb-2 text-primary">Portfolio de Pierre-Loup Perez</h1>
@@ -66,10 +73,10 @@
           </figcaption>
         </figure>
       </header>
-      
+
       <article>
         <h2 class="titre-article">
-          <a href="/pages/projets.html">Projets</a>
+          <a href="projets.html">Projets</a>
         </h2>
         <ul class="contenu-article">
           <li>
@@ -83,14 +90,14 @@
 
       <article class="titre-article">
         <h2>
-          <a href="/pages/presentation.html">Présentation</a>
+          <a href="presentation.html">Présentation</a>
         </h2>
         <p class="contenu-article">texte</p>
       </article>
 
       <article class="titre-article">
         <h2>
-          <a href="/pages/cv.html">Curriculum Vitae</a>
+          <a href="cv.html">Curriculum Vitae</a>
         </h2>
         <p class="contenu-article">texte</p>
       </article>

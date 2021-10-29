@@ -1,0 +1,94 @@
+{
+    "detectRetina": true,
+    "fpsLimit": 60,
+    "interactivity": {
+        "detectsOn": "canvas",
+
+        "modes":{
+            "bubble": {
+                "distance": 50,
+                "duration": 10,
+                "opacity": 0.8,
+                "size": 120,
+                "speed": 3,
+                "color": {
+                    "value": "#ff0000"
+                }
+            },
+            "connect": {
+                "distance": 80,
+                "line_Linked": {
+                    "opacity": 0.5
+                },
+                "radius": 60
+            },
+            "grab": {
+                "distance": 150,
+                "line_Linked": {
+                    "opacity": 1
+                }
+            },
+            "push":{
+                "quantity": 2
+            },
+            "remove":{
+                "quantity": 2
+            },
+            "repulse":{
+                "distance":200,
+                "duration": 0.4
+            }
+        }
+    },
+
+    "particles": {
+        "move": {
+            "enable": true,
+            "speed": 0.5,
+            "direction":{
+                "random": true
+            }
+        },
+
+        "number":{
+            "value":50
+        },
+
+        "color":{
+            "value": "#ffffff"
+        },
+
+        "opacity":{
+            "value": 0.8,
+            "random": true,
+            "anim":{
+                "enable": true,
+                "speed": 1
+            }
+        },
+
+        "links":{
+            "enable": true,
+            "distance": 300,
+            "opacity": 0.5,
+            "color": "#446e9b"
+
+        },
+
+        "size":{
+            "value":5,
+            "random": true,
+            "anim":{
+                "enable":true,
+                "speed":3
+            }
+        },
+
+        "shape":{
+            "stroke":{
+            "width": 1,
+            "color": "446e9b"
+            }
+            }
+    }
+}
