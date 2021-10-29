@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Pl Perez</a>
+        <a class="navbar-brand text-primary" href="#">Pl Perez</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -28,41 +29,44 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarColor03">
-          <ul class="navbar-nav me-auto">
+          <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
-              <a class="nav-link active" href="#"
-                >Accueil
+              <a class="nav-link active" href="#">
+                Accueil
                 <span class="visually-hidden">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/projets.html">Projets</a>
+              <a class="nav-link" href="/pages/projets.html">Projets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/presentation.html"
+              <a class="nav-link" href="/pages/presentation.html"
                 >Présentation</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/cv.html">Curriculum Vitae</a>
+              <a class="nav-link" href="/pages/cv.html">Curriculum Vitae</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-sm-2"
-              type="text"
-              placeholder="Rechercher"
-            />
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-              Rechercher
-            </button>
-          </form>
         </div>
       </div>
     </nav>
 
-    <main>
-      <h1>Portfolio de Pierre-Loup Perez</h1>
+    <!-- Main -->
+    <main class="container">
+
+        <!-- Header -->
+      <header class="text-center">
+        <figure class="text-intro">
+          <blockquote class="blockquote">
+            <h1 class="mb-2 text-primary">Portfolio de Pierre-Loup Perez</h1>
+          </blockquote>
+          <figcaption class="blockquote-footer text-dark">
+            Développeur <cite title="Source Title">Web et Web Mobile</cite>
+          </figcaption>
+        </figure>
+      </header>
+      
       <article>
         <h2 class="titre-article">
           <a href="/pages/projets.html">Projets</a>
@@ -91,5 +95,16 @@
         <p class="contenu-article">texte</p>
       </article>
     </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
