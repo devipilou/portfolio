@@ -18,10 +18,13 @@ MAJ par Pilou le 29/10/21 */
     width: 100%;
     z-index: -1;
 }
+body{
+  min-height: 100vh;
+}
 
 /* header */
 header {
-  height: 250px;
+  min-height: 250px;
   padding-top: 90px;
   background-image: repeating-linear-gradient(67.5deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),repeating-linear-gradient(51deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),linear-gradient(186deg, rgba(237,237,237, 0.66),rgba(199,199,199, 0.66));
 }
@@ -29,4 +32,10 @@ header {
 /* Main */
 .card{
     max-width: 300px;
+}
+
+/* Footer */
+footer{
+  min-height: 150px;
+  background-image: repeating-linear-gradient(67.5deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),repeating-linear-gradient(51deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),linear-gradient(186deg, rgba(237,237,237, 0.66),rgba(199,199,199, 0.66));
 }
