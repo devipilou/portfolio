@@ -13,15 +13,15 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.36.0/tsparticles.min.js"></script>
     <script src="js/app.js" defer></script>
 </head>
-<body>
+<body id="top">
 
     <!-- fond particules -->
     <div id="tsparticles"></div>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand text-primary" href="#">Perez Pl</a>
+        <a class="navbar-brand btn btn-light text-primary" href="index.html#top">Perez Pl</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarColor03">
           <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
-              <a class="nav-link active" href="#">
+              <a class="nav-link active" href="index.html">
                 Accueil
                 <span class="visually-hidden">(current)</span>
               </a>
@@ -46,9 +46,7 @@
               <a class="nav-link" href="projets.html">Projets</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="presentation.html"
-                >Présentation</a
-              >
+              <a class="nav-link" href="presentation.html">Présentation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="cv.html">Curriculum Vitae</a>
@@ -59,48 +57,88 @@
     </nav>
 
 
-    <!-- Main -->
-    <main class="container">
-
-        <!-- Header -->
-      <header class="text-center border border-light">
+    <!-- Header -->
+    <header class="container text-center border border-light rounded mb-5">
         <figure class="text-intro">
-          <blockquote class="blockquote">
-            <h1 class="mb-2 text-primary">Portfolio de Pierre-Loup Perez</h1>
-          </blockquote>
-          <figcaption class="blockquote-footer text-dark">
-            Développeur <cite title="Source Title">Web et Web Mobile</cite>
-          </figcaption>
+            <blockquote class="blockquote">
+                <h1 class="mb-2 text-primary">Portfolio de Pierre-Loup Perez</h1>
+            </blockquote>
+            <figcaption class="blockquote-footer text-dark">
+                Développeur <cite title="Source Title">Web et Web Mobile</cite>
+            </figcaption>
         </figure>
-      </header>
+    </header>
 
-      <article>
-        <h2 class="titre-article">
-          <a href="projets.html">Projets</a>
-        </h2>
-        <ul class="contenu-article">
-          <li>
-            <a href="/pilou_art/">Galerie d'art de Pilou-Art by Pilou</a>
-          </li>
-          <li>
-            <a href="https://maitressege.fr">Le blog de Maitresse Gé</a>
-          </li>
-        </ul>
+
+    <!-- Main -->
+    <main class="container text-center">
+
+      <article class="my-3 row align-items-center">
+        <h2 class="col-12 col-md-4">Qui suis-je?</h2>
+        <section class="col-12 col-md-8 justify-content-center">
+          <p>Développeur Web Fullstack Junior</p>
+          <p>Ancien Musicien-militaire reconverti</p>
+          <p>Créatif/Constructif/Curieux</p>
+          <a href="/presentation.html">en savoir plus</a>
+        </section>
       </article>
 
-      <article class="titre-article">
-        <h2>
-          <a href="presentation.html">Présentation</a>
-        </h2>
-        <p class="contenu-article">texte</p>
+      <hr class="mx-5 bg-primary">
+
+      <article class="my-3 row align-items-center">
+        <h2 class="col-12 col-md-4">Curriculum Vitae</h2>
+        <section class="col-12 col-md-8 justify-content-center">
+          <p>Front: Html/Css Scss/Sass Javascript Wordpress</p>
+          <p>Back: Php/mySql Laravel</p>
+          <p>Softskills: Initiatives Organisation Adaptation Autonomie</p>
+          <a href="/cv.html">en savoir plus</a>
+        </section>
       </article>
 
-      <article class="titre-article">
-        <h2>
-          <a href="cv.html">Curriculum Vitae</a>
-        </h2>
-        <p class="contenu-article">texte</p>
-      </article>
+      <hr class="mx-5 bg-primary">
+
+      <article class="row my-3 justify-content-around">
+        <section class="card border-primary col-12 col-sm-6 col-md-4">
+            <img class="card-img-top" src="/assets/pilou_art.jpg" alt="ecran d'accueil pilou_art">
+            <div class="card-header border border-light">Galerie d'image</div>
+            <div class="card-body">
+                <h4 class="card-title">Galerie d'art de Pilou - Art by Pilou</h4>
+                <div class="card-text">
+                    <a href="/pilou_art">Galerie d'art de Pilou - Art by Pilou</a>
+                    <p>Projet "from scratch" Html/Scss/Javascript</p>
+                    <p><small>galerie d'image pour <a href="https://www.instagram.com/pilou_art/" target="_blank">@pilou_art</a></small></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card border-primary col-12 col-sm-6 col-md-4">
+            <img class="card-img-top"  src="/assets/maitressege.jpg" alt="ecran d'accueil maitresse gé">
+            <div class="card-header border border-light">Wordpress</div>
+            <div class="card-body">
+                <h4 class="card-title">Le blog de Maitresse Gé</h4>
+                <div class="card-text">
+                    <a href="https://maitressege.fr">Le blog de Maitresse Gé</a>
+                    <p>Projet "Wordpress" thème OceanWP-Elementor</p>
+                    <p><small>blog de l'instagrameuse <a href="https://www.instagram.com/maitresse.ge/" target="_blank">@maitresse.ge</a></small></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card border-primary col-12 col-sm-6 col-md-4">
+          <img class="card-img-top"  src="https://via.placeholder.com/300x150/446e9b" alt="ecran d'accueil portfolio">
+          <div class="card-header border border-light">Portfolio</div>
+          <div class="card-body">
+              <h4 class="card-title">Portfolio de Pierre-Loup Perez</h4>
+              <div class="card-text">
+                  <a href="https://perezpl.fr">Portfolio</a>
+                  <p>Projet "Bootstrap" de portfolio</p>
+                  <p><small>présentation de mes projets terminés</small></p>
+              </div>
+          </div>
+        </section>
+      </article>    
+
+
     </main>
 
     <script
