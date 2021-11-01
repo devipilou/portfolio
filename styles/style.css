@@ -21,15 +21,20 @@ MAJ par Pilou le 29/10/21 */
 body{
   min-height: 100vh;
 }
-h3{
+h1, h2, h3{
+  color: #446e9b;
   margin-bottom: 1em;
 }
+header, footer, .enTeteCv, .titreCv{
+  background-image: repeating-linear-gradient(67.5deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),repeating-linear-gradient(0deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),linear-gradient(135deg, rgb(237, 237, 237),rgb(68,110,155));
+}
+
 
 /* header */
 header {
   min-height: 250px;
-  padding-top: 90px;
-  background-image: repeating-linear-gradient(67.5deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),repeating-linear-gradient(51deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),linear-gradient(186deg, rgba(237,237,237, 0.66),rgba(199,199,199, 0.66));
+  padding-top: 80px;
+  clip-path: polygon(0 0, 3% 100%, 50% 90%, 97% 100%, 100% 0);
 }
 
 /* Main */
@@ -42,9 +47,13 @@ header {
 .icone{
   max-height: 50px;
 }
+.titreCv{
+  padding: 0.5em;
+  clip-path: polygon(5% 0, 8% 95%, 50% 95%, 92% 95%, 95% 0);
+}
 
 /* Footer */
 footer{
   min-height: 150px;
-  background-image: repeating-linear-gradient(67.5deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),repeating-linear-gradient(51deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),linear-gradient(186deg, rgba(237,237,237, 0.66),rgba(199,199,199, 0.66));
+  clip-path: polygon(3% 0, 0 100%, 100% 100%, 97% 0, 50% 5%);
 }
