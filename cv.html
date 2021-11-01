@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.36.0/tsparticles.min.js"></script>
     <script src="js/app.js" defer></script>
   </head>
-  <body>
+  <body id="top">
 
     <!-- fond particules -->
     <div id="tsparticles"></div>
@@ -68,8 +68,128 @@
        </figure>
      </header>
 
-    <main class="container">
-      <p>en construction</p>
+    <main class="container text-center ">
+      <!-- titre du CV -->
+      <div class="row align-items-center justify-content-center">
+        <h2 class="col-12 col-sm-6 col-md-8 mb-2">Développeur Web Junior</h2>
+        <img class="photoProfil col-12 col-sm-6 col-md-4 mb-2" src="/assets/PhotoCV1reduit.jpg" alt="photo pierre-loup">
+      </div>
+
+      <hr>
+
+      <!-- Corps du CV -->
+      <div class="row">
+
+        <!-- Colonne de gauche -->
+        <div class="col-12 col-md-8">
+
+          <!-- Competences -->
+          <article>
+            <h3 class="mb-3">Competences</h3>
+            <section class="row align-items-center">
+              <h4 class="col-12 col-lg-2">WebDev</h4>
+              <p class="col-12 col-lg-3">
+                <img src="/assets/htmlCssJs.png" alt="HtmlCssJs" class="icone">
+              </p>
+              <p class="col-12 col-lg-4">
+                <img src="/assets/git.png" alt="git" class="icone">
+                <img src="/assets/github.png" alt="github" class="icone">
+                <img src="/assets/laravel.png" alt="laravel" class="icone">
+                <img src="/assets/java.png" alt="java" class="icone">
+              </p>
+            </section>
+            <section class="row">
+              <h4 class="col-12 col-lg-2">Divers</h4>
+              <p class="col-12 col-lg-3">
+                <img src="/assets/word.png" alt="word" class="icone">
+                <img src="/assets/powerpoint.png" alt="powerpoint" class="icone">
+                <img src="/assets/excel.png" alt="excel" class="icone">
+              </p>
+              <p class="col-12 col-lg-4">
+                <img src="/assets/protools.png" alt="protools" class="icone">
+                <img src="/assets/finale.png" alt="finale" class="icone">
+                <img src="/assets/samplitude.png" alt="samplitude" class="icone">
+              </p>
+            </section>
+            <section class="row">
+              <h4 class="col-12">Mes Atouts</h4>
+              <ul class="col-12 text-start ms-2">
+                <li>Prises d’initiatives et résolution de problèmes, bonne organisation et planification, capacité d’adaptation, gestion d’équipe, suivi de l’avancement, respect des délais, gestion du temps et des priorités, force de proposition, autonomie</li>
+                <li>Courtoisie, savoir vivre, empathie, sens de l’écoute, capacité à gérer les conflits, gestion du stress</li>
+                <li>Anglais oral courant, et expérimenté à l’écrit</li>
+                <li>Gestion des stocks, gestion de trésorerie</li>
+              </ul>
+            </section>
+          </article>
+  
+          <hr>
+          <!-- Expériences -->
+          <article>
+            <h3>Experiences</h3>
+            <section class="row align-items-center">
+              <h4 class="col-12 col-lg-3">2011-2021</h4>
+              <div class="col-12 col-lg-9">
+                <p><span class="text-primary">Sergent-chef de l’Armée de Terre</span> au sein de la Musique de l’Artillerie. Affectations en parallèle :
+                </p>
+                <ul class="text-start">
+                  <li>Musicien soliste au sein du pupitre de cor de l’orchestre d’harmonie</li>
+                  <li>Gestionnaire des archives musicales : rangement, classement et gestion des partitions de l’ensemble des musiciens de l’orchestre</li>
+                  <li>Musicien professionnel et arrangeur au sein du quintette de cuivre</li>
+                  <li>Responsable du studio d’enregistrement : organisation de l’enregistrement, du montage et de l’édition de CD</li>
+                </ul>
+              </div>
+            </section>
+            <section class="row align-items-center">
+              <h4 class="col-12 col-lg-3">2011-2014</h4>
+              <p class="col-12 col-lg-9"><span class="text-primary">Professeur de cor</span> - Conservatoire d’Heyrieux (38)<br>
+              Encadrement d'ensembles d'élèves</p>
+            </section>
+            <section class="row align-items-center">
+              <h4 class="col-12 col-lg-3">2010-2011</h4>
+              <p class="col-12 col-lg-9"><span class="text-primary">Vendeur</span> à la Brioche Dorée</p>
+            </section>
+          </article>
+  
+        </div>
+        <!-- Colonne de droite -->
+        <aside class="col-12 col-md-4">
+          <h3>Formations</h3>
+          <section>
+            <h4>2021-2022</h4>
+            <p>Développeur Web et Web Mobile au GRETA Lyon-Métropole</p>
+          </section>
+          <section>
+            <h4>2014-2015</h4>
+            <p>Sous-officier (cadre) de l’armée de terre au sein de l’école nationale des sous-officiers d’active de Saint-Maixent</p>
+          </section>
+          <section>
+            <h4>2008-2010</h4>
+            <p>Formation à l’enseignement musical au sein de conservatoire national d’Amiens</p>
+          </section>
+          <section>
+            <h4>2004-2008</h4>
+            <p>Diplôme d’Etudes Musicales au conservatoire national de Lyon</p>
+          </section>
+          <section>
+            <h4>2003-2004</h4>
+            <p>Baccalauréat Scientifique (option Sciences de la vie et de la terre)</p>
+          </section>
+        </aside>
+      </div>
+
+
+      <hr>
+      <!-- Pied du CV - Intérets -->
+      <article class="col-12 row align-items-center">
+        <h3 class="col-12 col-md-3">Interets</h3>
+        <ul class="col-12 col-md-9 text-start">
+          <li>Informatique : intérêt personnel pour la Cybersécurité</li>
+          <li>Sport : golf, football, running</li>
+          <li>Musique : composition musicale, pratique du cor et de la trompette</li>
+          <li>Autres : lecture, peinture/dessin, menuiserie/lutherie, jeux-vidéo</li>
+        </ul>
+      </article>
+
     </main>
 
     <footer class="container-fluid text-center border border-light mt-5">
