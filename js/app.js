@@ -1,10 +1,22 @@
-tsParticles.loadJSON("tsparticles",
-"presets/default.json").then((container) => {
-console.log("callback - tsparticles config loaded");
-})
-.catch((error) => {
-console.error(error);
-});
+if (window.matchMedia("(min-width: 769px)").matches) {
+    /* La largeur minimum de l'affichage est 769px inclus */
+    tsParticles.loadJSON("tsparticles",
+    "presets/default.json").then((container) => {
+    console.log("callback - tsparticles config loaded");
+    })
+    .catch((error) => {
+    console.error(error);
+    });
+  }else{
+    tsParticles.loadJSON("tsparticles",
+    "presets/defaultSmDevices.json").then((container) => {
+    console.log("callback - tsparticles config loaded");
+    })
+    .catch((error) => {
+    console.error(error);
+    });
+  }
+
 
 let age = document.querySelector('#age');
 let annee = document.querySelector('#annee');

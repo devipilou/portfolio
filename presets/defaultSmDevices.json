@@ -51,11 +51,11 @@
         },
 
         "number":{
-            "value":50
+            "value":20
         },
 
         "color":{
-            "value": "#eeeeee"
+            "value": "#ffffff"
         },
 
         "opacity":{
@@ -69,8 +69,8 @@
 
         "links":{
             "enable": true,
-            "distance": 300,
-            "opacity": 0.4,
+            "distance": 200,
+            "opacity": 0.2,
             "color": "#446e9b"
 
         },
