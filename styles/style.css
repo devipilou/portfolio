@@ -25,7 +25,10 @@ h1, h2, h3{
   color: #446e9b;
   margin-bottom: 1em;
 }
-header, footer, .enTeteCv, .titreCv{
+h4{
+  margin: 1em 0;
+}
+header, .enTeteCv, .titreCv{
   background-image: repeating-linear-gradient(67.5deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),repeating-linear-gradient(0deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),linear-gradient(135deg, rgb(237, 237, 237),rgb(68,110,155));
 }
 
@@ -50,11 +53,15 @@ header {
 }
 .titreCv{
   padding: 0.5em;
-  clip-path: polygon(10% 0, 90% 0, 100% 20%, 95% 100%, 50% 90%, 5% 100%, 0 20%);
+  clip-path: polygon(20% 0, 80% 0, 100% 10%, 95% 100%, 50% 90%, 5% 100%, 0 10%);
+}
+article{
+  margin: 1em 0;
 }
 
 /* Footer */
 footer{
   min-height: 150px;
+  background-image: repeating-linear-gradient(67.5deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),repeating-linear-gradient(0deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),linear-gradient(135deg, rgb(237, 237, 237),rgb(199, 199, 199));
   clip-path: polygon(3% 0, 0 100%, 100% 100%, 97% 0, 50% 5%);
 }

@@ -70,7 +70,7 @@
         "links":{
             "enable": true,
             "distance": 300,
-            "opacity": 0.5,
+            "opacity": 0.1,
             "color": "#999999"
 
         },
@@ -87,7 +87,7 @@
         "shape":{
             "stroke":{
             "width": 1,
-            "color": "446e9b"
+            "color": "#446e9b"
             }
             }
     }
