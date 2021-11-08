@@ -21,8 +21,12 @@ MAJ par Pilou le 29/10/21 */
 body{
   min-height: 100vh;
 }
-h1, h2, h3{
+h1{
   color: #446e9b;
+  margin-bottom: 1em;
+}
+h2, h3{
+  color: #3399f3;
   margin-bottom: 1em;
 }
 h4{
@@ -55,6 +59,7 @@ header {
   max-height: 50px;
 }
 .titreCv{
+  color : #446e9b;
   padding: 0.5em;
   clip-path: polygon(20% 0, 80% 0, 100% 10%, 95% 100%, 50% 90%, 5% 100%, 0 10%);
 }
