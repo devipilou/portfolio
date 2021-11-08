@@ -70,7 +70,7 @@
         "links":{
             "enable": true,
             "distance": 300,
-            "opacity": 0.4,
+            "opacity": 0.3,
             "color": "#446e9b"
 
         },

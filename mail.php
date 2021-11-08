@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RGPD - Pierre-Loup Perez</title>
+    <title>Mail - Pierre-Loup Perez</title>
     <link
       rel="stylesheet"
       href="https://bootswatch.com/5/spacelab/bootstrap.min.css"
@@ -57,7 +57,7 @@
     <header class="container-fluid text-center mb-5">
        <figure class="text-intro">
          <blockquote class="blockquote">
-           <h1 class="mb-2 display-4">RGPDs</h1>
+           <h1 class="mb-2 display-4">Contactez-moi</h1>
          </blockquote>
          <figcaption class="blockquote-footer text-dark">
            <cite title="Source Title">Pierre-Loup Perez</cite>
@@ -65,9 +65,20 @@
        </figure>
      </header>
 
-    <!-- Main -->
-    <main class="container">
-      <p>en construction</p>
+     
+     <!-- Main -->
+     <main class="container">
+
+        <?php
+        $name = $_POST['name'];
+        $mail = $_POST['email'];
+
+        $retour = mail('devipilou@gmail.com', 'Envoi depuis la page Contact de la part de ' . $name , $_POST['message'], 'Mail du contact: ' . $mail);
+        if ($retour) {
+            echo '<p>Votre message a bien été envoyé.</p>';
+        }
+        ?>
+
     </main>
 
     <footer class="container-fluid row text-center justify-content-center mt-5 pt-3">
@@ -88,9 +99,8 @@
         <h4>Liens internes</h4>
         <a href="contact.html">Contactez-moi</a>
         <a href="mentions.html">Mentions Légales</a>
-        <a href="rgpd.html">RGPD</a>
       </section>
-      <p class="col-12">&copy; <span id="annee"></span> - Pierre-Loup Perez</p>
+      <p class="col-12 mt-2">&copy; <span id="annee"></span> - Pierre-Loup Perez</p>
     </footer>
 
     <script

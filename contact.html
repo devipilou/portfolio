@@ -65,9 +65,43 @@
        </figure>
      </header>
 
-    <!-- Main -->
-    <main class="container">
-      <p>en construction</p>
+     
+     <!-- Main -->
+     <main class="container">
+       <h2>Informations</h2>
+       <article>
+         <p>Vous venez de découvrir mon portfolio, et vous souhaitez me contacter?</p>
+         <p>N'hésitez pas à me laisser un message ici, je vous répondrai rapidement.</p>
+         <p>Si vous le préférez vous pouvez me contacter sur <a href="https://www.linkedin.com/in/pierre-loup-perez">LinkedIn</a> ou via mon profil <a href="https://github.com/devipilou/devipilou">Github</a>.</p>
+        </article>
+        
+        <hr class="bg-primary my-5">
+        
+        <!-- Alert -->
+        <div class="alert alert-dismissible alert-warning text-center">
+         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+         <strong>Important!</strong> Aucune informations que vous me transmettrez ci-dessous ne sera transmise à un tiers
+       </div>
+
+      <form name="contactPortfolio" method="post" netlify-honeypot="bot-field" data-netlify="true">
+        <h2>Formulaire de contact</h2>
+        <p class="hidden">
+          <label>Ne remplissez pas ceci si vous êtes un humain: <input name="bot-field" /></label>
+        </p>
+        <div class="mb-3">
+          <label for="name" class="form-label">Comment dois-je vous appeler?</label>
+          <input type="text" name="name" id="name" placeholder="Votre nom" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">A quelle adresse puis-je vous répondre?</label>
+          <input type="email" name="email" id="email" placeholder="exemple@mail.fr" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Votre Message:</label>
+          <textarea name="message" id="message" rows="10" class="form-control" placeholder="Corps de votre message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Envoyez</button>
+      </form>
     </main>
 
     <footer class="container-fluid row text-center justify-content-center mt-5 pt-3">
@@ -88,9 +122,8 @@
         <h4>Liens internes</h4>
         <a href="contact.html">Contactez-moi</a>
         <a href="mentions.html">Mentions Légales</a>
-        <a href="rgpd.html">RGPD</a>
       </section>
-      <p class="col-12">&copy; <span id="annee"></span> - Pierre-Loup Perez</p>
+      <p class="col-12 mt-2">&copy; <span id="annee"></span> - Pierre-Loup Perez</p>
     </footer>
 
     <script
