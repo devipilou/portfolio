@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.36.0/tsparticles.min.js"></script>
     <script src="/js/app.js" defer></script>
   </head>
-  <body>
+  <body id="top">
     
     <!-- fond particules -->
     <div id="tsparticles"></div>
@@ -70,10 +70,38 @@
 
     <!-- Main -->
     <main class="container">
+
       <!-- mini-nav -->
-      <article class="d-flex">
-        <a href="#portfolio" class="btn btn-outline-primary">mon portfolio</a><a href="#portfolio" class="btn btn-outline-primary">mon portfolio</a>
-      </article>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler mx-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#miniNav"
+            aria-controls="navbarColor03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="miniNav">
+            <ul class="navbar-nav mx-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Mon Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#maitressege">Maitresse Gé</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pilouart">Pilou_art</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
 
       <!-- Portfolio -->
       <article class="row border border-2 border-primary rounded p-3" id="portfolio">
@@ -81,16 +109,57 @@
           <h2>Mon Portfolio</h2>
         </section>
         <section class="imgProj col-12 col-md-6">
-          <img class="img-fluid" src="/assets/portfolio.jpg" alt="ecran CV portfolio">
+          <img class="img-fluid border border-primary rounded" src="/assets/portfolio.jpg" alt="ecran CV portfolio">
         </section>
         <section class="txtProj col-12 col-md-6 row">
           <h3>Projet Bootstrap et Js</h3>
-          <p>Mon portfolio est l'occasion pour moi de mettre en pratique mes cours sur bootstrap et de réaliser une animation en Javascript</p>
-          <p>Il est construit à l'aide de bootstrap5 et du thème <a href="https://bootswatch.com/spacelab/">Spacelab</a> de Bootswatch et un peu de custon Css</p>
+          <p>Mon portfolio est l'occasion pour moi de mettre en pratique mes cours sur bootstrap et de réaliser une animation en Javascript.</p>
+          <p>Il est construit à l'aide de bootstrap5 et du thème <a href="https://bootswatch.com/spacelab/">Spacelab</a> de Bootswatch et un peu de custon Css.</p>
           <p>Le fond de page est une animation Js a l'aide de la librtairie <a href="https://particles.js.org/">tsParticles</a>.</p>
-          <p>C'est actuellement le site sur lequel vous naviguez</p>
-          <a href="https://perezpl.fr" class="btn btn-info">Visitez le site</a>
+          <p>C'est le site sur lequel vous naviguez actuellement.</p>
+          <a href="https://perezpl.fr" class="btn btn-info">Revenir à l'accueil</a>
         </section>
+      </article>
+
+      <!-- Maitresse Gé -->
+      <article class="row border border-2 border-primary rounded p-3" id="maitressege">
+        <section class="titreProj col-12 text-center">
+          <h2>Blog de MaitresseGe</h2>
+        </section>
+        <section class="txtProj col-12 col-md-6 row">
+          <h3>Projet Wordpress</h3>
+          <p>Ce projet est pour moi presque un prétexte pour découvrir <a href="https://wordpress.com/fr/" target="_blank">Wordpress</a>. Qu'on apprécie ou non ce CMS, il n'en est pas moins un incontournable outil web et il est essentiel d'en connaitre l'utilisation.</p>
+          <p>Ce site est construit sur le thème <a href="https://oceanwp.org/" target="_blank">OceanWP</a>, et à l'aide d'extensions comme Elementor, Wordfence, ou ContactForm7. Il fait également appel à une api smtp gmail pour gérer les envois de mail depuis le formulaire.</p>
+          <p>C'est le blog dans lequel l'instagrameuse <a href="https://www.instagram.com/maitresse.ge/" target="_blank">@maitresse.ge</a> partage ses ateliers avec d'autres enseignants de cycle 2.</p>
+          <a href="https://maitressege.fr" target="_blank" class="btn btn-info">Visitez le site</a>
+        </section>
+        <section class="imgProj col-12 col-md-6">
+          <img class="img-fluid border border-primary rounded" src="/assets/maitressege.jpg" alt="ecran accueil maitressege">
+        </section>
+      </article>
+      
+      <!-- Pilou art -->
+      <article class="row border border-2 border-primary rounded p-3" id="pilouart">
+        <section class="titreProj col-12 text-center">
+          <h2>Galerie de Pilou_art</h2>
+        </section>
+        <section class="imgProj col-12 col-md-6">
+          <img class="img-fluid border border-primary rounded" src="/assets/pilou_art.jpg" alt="ecran accueil pilou_art">
+        </section>
+        <section class="txtProj col-12 col-md-6 row">
+          <h3>Projet "from scratch" avec Scss et Js</h3>
+          <p>Ce site est une galerie des dessins que je fais à mes heures perdues et que je partage habituellement sur <a href="https://www.instagram.com/pilou_art/" target="_blank">instagram</a></p>
+          <p>Je l'ai concu comme un exercice de construction de site en partant de rien, et en gérant le style en Sass/scss. Les animations du menu sont en Javascript.</p>
+          <p>Il est installé en tant que sous-domaine du site actuel, et est géré comme sous-module de ce dernier avec Git</p>
+          <a href="https://perezpl.fr/pilou_art/" target="_blank" class="btn btn-info">Visitez le site</a>
+        </section>
+      </article>
+
+      <!-- CTA -->
+      <article class="text-center alert alert-info">
+        <p>Ces projets vous plaisent? Vous êtes interressés par mon travail?</p>
+        <p>N'hésitez plus</p>
+        <a class="btn btn-success btn-lg" href="contact.html">Contactez-moi</a>
       </article>
 
       
