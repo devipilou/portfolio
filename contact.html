@@ -78,8 +78,7 @@
         <hr class="mx-5 bg-primary my-5">
       
         <!-- Alert -->
-        <div class="alert alert-dismissible alert-warning text-center">
-         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <div class="alert alert-warning text-center">
          <span class="badge rounded-pill bg-warning me-2">Important</span>
          Aucune informations que vous me transmettrez ci-dessous ne sera transmise à un tiers
        </div>
@@ -91,19 +90,36 @@
         <p class="hidden">
           <label>Ne remplissez pas ceci si vous êtes un humain: <input name="bot-field" /></label>
         </p>
-        <div class="mb-3">
+
+        <div class="mb-3 form-group">
           <label for="name" class="form-label">Comment dois-je vous appeler?</label>
-          <input type="text" name="name" id="name" placeholder="Votre nom" class="form-control" required>
+          <div class="input-group">
+            <input type="text" name="name" id="name" placeholder="Votre nom" class="form-control" required>
+            <img src="" alt="icone de validation" class="icone-verif ms-2">
+          </div>
+          <span class="message-alerte text-info">Choisissez un nom ne comprenant que des lettres et des chiffres s'il-vous-plait</span>
+
         </div>
-        <div class="mb-3">
+
+        <div class="mb-3 form-group">
           <label for="email" class="form-label">A quelle adresse puis-je vous répondre?</label>
-          <input type="email" name="email" id="email" placeholder="exemple@mail.fr" class="form-control" required>
+          <div class="input-group">
+            <input type="email" name="email" id="email" placeholder="exemple@mail.fr" class="form-control" required>
+            <img src="" alt="icone de validation" class="icone-verif ms-2">
+          </div>
+          <span class="message-alerte text-info">Veuillez entrer un mail valide s'il-vous-plait</span>
         </div>
-        <div class="mb-3">
+
+        <div class="mb-3 form-group">
           <label for="message" class="form-label">Votre Message:</label>
-          <textarea name="message" id="message" rows="10" class="form-control" placeholder="Corps de votre message" required></textarea>
+          <div class="input-group">
+            <textarea name="message" id="message" rows="10" class="form-control" placeholder="Corps de votre message" required></textarea>
+            <img src="" alt="icone de validation" class="icone-verif ms-2">
+          </div>
+          <span class="message-alerte text-info">Veuillez remplir ce champ s'il-vous-plait</span>
         </div>
-        <button type="submit" class="btn btn-success">Envoyez</button>
+
+        <button type="submit" class="btn btn-success disabled">Envoyez</button>
       </form>
     </main>
 
@@ -145,5 +161,6 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/validateForm.js"></script>
   </body>
 </html>

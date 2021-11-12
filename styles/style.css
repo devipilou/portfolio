@@ -67,6 +67,15 @@ article{
   margin: 1em 0;
 }
 
+.icone-verif{
+  display: none;
+  height: 40px;
+  width: 40px;
+}
+.message-alerte{
+  display: none;
+}
+
 /* Footer */
 footer{
   min-height: 150px;
