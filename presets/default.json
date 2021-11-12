@@ -59,7 +59,7 @@
         },
 
         "opacity":{
-            "value": 0.8,
+            "value": 0.3,
             "random": true,
             "anim":{
                 "enable": true,
@@ -71,7 +71,7 @@
             "enable": true,
             "distance": 300,
             "opacity": 0.2,
-            "color": "#446e9b"
+            "color": "#ced4da"
 
         },
 

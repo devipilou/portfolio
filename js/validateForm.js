@@ -8,14 +8,14 @@ const btnSub = document.querySelector('form button');
 const allImg = document.querySelectorAll('.form-group img');
 const allSpan = document.querySelectorAll('.form-group span');
 
-
+// objet de stockage des champs validés
 const controleValidation = {
     name : 0,
     mail : 0,
     message : 0
 };
 
-
+// validation Name
 inpName.addEventListener('input', (e) => {
 
     let regexName = /^\w+$/g;
@@ -37,6 +37,7 @@ inpName.addEventListener('input', (e) => {
 
 });
 
+// validation Email
 inpMail.addEventListener('input', (e) => {
 
     let regexMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -58,6 +59,7 @@ inpMail.addEventListener('input', (e) => {
 
 });
 
+// validation Message
 inpMessage.addEventListener('input', (e) => {
     if(e.target.value.length >= 1){
         allImg[2].style.display = "inline";
@@ -74,6 +76,7 @@ inpMessage.addEventListener('input', (e) => {
     affichageBtn();
 });
 
+// affichage du btn submit si tout est validé
 function affichageBtn(){
 
     if((controleValidation['name'] === 1) && (controleValidation['mail'] === 1) && (controleValidation['message'] === 1)){
