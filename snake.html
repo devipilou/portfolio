@@ -61,10 +61,10 @@
     <header class="container-fluid text-center mb-5">
        <figure class="text-intro">
          <blockquote class="blockquote">
-           <h1 class="mb-2 display-4">Bonus</h1>
+           <h1 class="mb-2 display-4">Snake</h1>
          </blockquote>
          <figcaption class="blockquote-footer text-dark">
-           <cite title="Source Title">jeux</cite>
+           <cite title="Source Title">bonus</cite>
          </figcaption>
        </figure>
      </header>
@@ -72,24 +72,21 @@
      
      <!-- Main -->
      <main class="container">
-       <article class="text-center alert alert-secondary">
-         <h2>Bravo</h2>
-         <p>Vous etes arrivés sur la page la plus intéressante du site.</p>
-         <p>Vous pourrez trouver ici, un jeu pour l'instant, mais j'espère assez vite pouvoir vous en proposer plus</p>
-         <p><strong>Amusez-vous bien!!</strong></p>
-        </article>
+       
+      <article id="snake" class="text-center">
+        <canvas id="canvasSnake" width="300" height="300"></canvas>
+        <p>Score = <span id="score">0</span></p>
+        <p><small class="text-secondary">ps: mon record est <span id="record"></span></small></p>
+        <div id="messageSnake"></div>
+        <div id="recommencer">Appuyez sur espace ou touchez le jeu pour recommencer</div>
+      </article>
 
-        <hr class="mx-5 bg-primary my-5">
+      <hr class="mx-5 bg-primary my-5">
 
-        <article id="snake" class="text-center">
-            <h3>Le Mythique "SNAKE"</h3>
-            <p>Un gameplay inventé en 1976 avec le jeu Blockade, que l'on retrouve dans des jeux comme Worm en 1978, Tron et Nibbler en 1982.</p>
-            <p>Il est également connu pour les différentes version de Snake parues à partir de 1997 sur Nokia 6610</p>
-            <a class="btn btn-secondary" href="snake.html">Essayer le jeu</a>
-            <a class="btn btn-light" href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)">Historique du jeu</a>
-        </article>
-      
-        
+      <article class="text-center">
+        <p>Un grand merci à Enzo Ustariz de <a href="https://www.ecole-du-web.net/">l'école du Web</a> pour son tuto qui explique comment coder ce jeu ce jeu.</p>
+      </article>
+
     </main>
 
     <div class="my-5 d-flex justify-content-end">
@@ -130,6 +127,6 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="/js/snake.js"></script> -->
+    <script src="/js/snake.js"></script>
   </body>
 </html>

@@ -182,11 +182,6 @@ canvas.addEventListener('touchstart', (e) => {
     
 });
 
-
-
-
-
-
 function changerDirectionMobile(swipeDirection){
     console.log(swipeDirection);
 
