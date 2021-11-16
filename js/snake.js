@@ -24,8 +24,10 @@ let score = 0;
 let bugDirection = false;
 // stopgame
 let stopGame = false;
+// Intervalle pour la dificulté croissante
+let interval = 200;
 
-let snake = [ {x:140, y:150}, {x:130, y:150}, {x:120, y:150}, {x:110, y:150} ];
+let snake = [ {x:40, y:150}, {x:30, y:150}, {x:20, y:150}, {x:10, y:150} ];
 
 
 function annimation(){
@@ -46,7 +48,8 @@ function annimation(){
             // recursion
             annimation();
     
-        }, 100);
+        }, interval);
+
 
     }
 
@@ -91,6 +94,19 @@ function faireAvancerSerpent() {
     if(serpentMangePomme){
         score += 10;
         document.querySelector('#score').innerHTML = score;
+        // acceleration
+        if (score%50 === 0){
+            if(interval > 100){
+                interval -= 20;
+            }else if(interval <= 100 && interval > 80){
+                interval -= 5;
+            }else if(interval <= 80 && interval > 60){
+                interval -= 2;
+            }else if(interval <= 60 && interval > 50){
+                interval -= 1;
+            }
+            console.log("intervalle de rafraichissement :" + interval);
+        }
         creerPomme();
     }else{
         snake.pop();
