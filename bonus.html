@@ -49,7 +49,8 @@
               <a class="nav-link" href="cv.html">Curriculum Vitae</a>
             </li>
             <li class="nav-item">
-              <a href="bonus.html" class="nav-link">Bonus</a>
+                <a href="bonus.html" class="nav-link active">Bonus</a>
+                <span class="visually-hidden">(current)</span>
             </li>
           </ul>
         </div>
@@ -60,10 +61,10 @@
     <header class="container-fluid text-center mb-5">
        <figure class="text-intro">
          <blockquote class="blockquote">
-           <h1 class="mb-2 display-4">Contactez-moi</h1>
+           <h1 class="mb-2 display-4">Bonus</h1>
          </blockquote>
          <figcaption class="blockquote-footer text-dark">
-           <cite title="Source Title">Pierre-Loup Perez</cite>
+           <cite title="Source Title">jeux</cite>
          </figcaption>
        </figure>
      </header>
@@ -72,59 +73,25 @@
      <!-- Main -->
      <main class="container">
        <article class="text-center alert alert-secondary">
-         <h2>Informations</h2>
-         <p>Vous venez de découvrir mon portfolio, et vous souhaitez me contacter?</p>
-         <p>N'hésitez pas à me laisser un message ici, je vous répondrai rapidement.</p>
-         <p>Si vous le préférez, vous pouvez me contacter sur <a href="https://www.linkedin.com/in/pierre-loup-perez">LinkedIn</a> ou via mon profil <a href="https://github.com/devipilou/devipilou">Github</a>.</p>
+         <h2>Bravo</h2>
+         <p>Vous etes arrivés sur la page la plus intéressante du site.</p>
+         <p>Vous pourrez trouver ici, un jeu pour l'instant, mais j'espère assez vite pouvoir vous en proposer plus</p>
+         <strong>Amusez-vous bien!!</strong>
+         <br>
+         <small class="text-secondary">ps: mon record au "snake" est 500</small>
         </article>
 
         <hr class="mx-5 bg-primary my-5">
+
+        <article id="snake" class="text-center">
+            <h3>Le Mythique "SNAKE"</h3>
+            <p>Score = <span id="score">0</span></p>
+            <canvas id="canvasSnake" width="300" height="300"></canvas>
+            <div id="messageSnake"></div>
+            <div id="recommencer">Appuyez sur espace ou touchez le jeu pour recommencer</div>
+        </article>
       
-        <!-- Alert -->
-        <div class="alert alert-warning text-center">
-         <span class="badge rounded-pill bg-warning me-2">Important</span>
-         Aucune informations que vous me transmettrez ci-dessous ne sera transmise à un tiers
-       </div>
-
-       <hr class="mx-5 bg-primary my-5">
-      
-      <form name="contactPortfolio" method="post" netlify-honeypot="bot-field" data-netlify="true">
-        <h2>Formulaire de contact</h2>
-        <p class="hidden">
-          <label>Ne remplissez pas ceci si vous êtes un humain: <input name="bot-field" /></label>
-        </p>
-
-        <div class="mb-3 form-group">
-          <label for="name" class="form-label">Comment dois-je vous appeler?</label>
-          <span class="message-alerte text-info">Choisissez un nom ne comprenant que des lettres et des chiffres s'il-vous-plait</span>
-          <div class="input-group">
-            <input type="text" name="name" id="name" placeholder="Votre nom" class="form-control" required>
-            <img src="" alt="icone de validation" class="icone-verif ms-2">
-          </div>
-
-        </div>
-
-        <div class="mb-3 form-group">
-          <label for="email" class="form-label">A quelle adresse puis-je vous répondre?</label>
-          <span class="message-alerte text-info">Veuillez entrer un mail valide s'il-vous-plait</span>
-          <div class="input-group">
-            <input type="email" name="email" id="email" placeholder="exemple@mail.fr" class="form-control" required>
-            <img src="" alt="icone de validation" class="icone-verif ms-2">
-          </div>
-        </div>
-
-        <div class="mb-3 form-group">
-          <label for="message" class="form-label">Votre Message:</label>
-          <span class="message-alerte text-info">Veuillez remplir ce champ s'il-vous-plait</span>
-          <div class="input-group">
-            <textarea name="message" id="message" rows="10" class="form-control" placeholder="Corps de votre message" required></textarea>
-            <img src="" alt="icone de validation" class="icone-verif ms-2">
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary disabled">Envoyez</button>
-        <span id="submit-message">Merci de remplir tous les champs</span>
-      </form>
+        
     </main>
 
     <div class="my-5 d-flex justify-content-end">
@@ -165,6 +132,6 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
-    <script src="/js/validateForm.js"></script>
+    <script src="/js/snake.js"></script>
   </body>
 </html>
