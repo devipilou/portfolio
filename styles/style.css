@@ -32,7 +32,7 @@ h2, h3{
 h4{
   margin: 1em 0;
 }
-header, .enTeteCv, .titreCv{
+header{
   background-image: repeating-linear-gradient(67.5deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),repeating-linear-gradient(0deg, hsla(145,0%,97%,0.2) 0px, hsla(145,0%,97%,0.2) 0px,transparent 0px, transparent 1px,hsla(145,0%,97%,0.2) 1px, hsla(145,0%,97%,0.2) 4px,transparent 4px, transparent 5px,hsla(145,0%,97%,0.2) 5px, hsla(145,0%,97%,0.2) 8px),linear-gradient(135deg, rgb(237, 237, 237),rgb(68,110,155));
 }
 a{
@@ -50,23 +50,20 @@ header {
   clip-path: polygon(0 0, 3% 100%, 50% 90%, 97% 100%, 100% 0);
 }
 
+
 /* Main */
 .card{
     max-width: 300px;
 }
 .photoProfil{
   max-width: 200px;
-  border-radius: 3px;
+  border-radius: 5px;
 
 }
 .icone{
   max-height: 50px;
 }
-.titreCv{
-  color : #446e9b;
-  padding: 0.5em;
-  border-radius: 3px;
-}
+
 article{
   margin: 1em 0;
 }

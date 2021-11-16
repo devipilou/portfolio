@@ -2,6 +2,7 @@ const inpName = document.querySelector('#name');
 const inpMail = document.querySelector('#email');
 const inpMessage = document.querySelector('#message');
 const btnSub = document.querySelector('form button');
+const messSub = document.querySelector('#submit-message');
 
 
 
@@ -81,7 +82,11 @@ function affichageBtn(){
 
     if((controleValidation['name'] === 1) && (controleValidation['mail'] === 1) && (controleValidation['message'] === 1)){
         btnSub.classList.remove('disabled')
+        btnSub.classList.add('btn-lg')
+        messSub.style.display = "none";
     }else{
         btnSub.classList.add('disabled')
+        btnSub.classList.remove('btn-lg')
+        messSub.style.display = "inline";
     }
 };
