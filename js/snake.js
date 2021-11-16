@@ -2,6 +2,10 @@
 const canvas = document.querySelector('#canvasSnake');
 const ctx = canvas.getContext('2d');
 const message = document.querySelector('#messageSnake');
+const monRecord = 500;
+
+const record = document.querySelector('#record');
+record.innerHTML = monRecord;
 
 
 
@@ -273,7 +277,7 @@ function recommencer(){
     const restart = document.querySelector('#recommencer');
     restart.style.display = "block";
 
-    if(score > 500 ){
+    if(score > monRecord ){
         message.innerHTML = "Bravo, vous m'avez battu!!";
     }else{
         message.innerHTML = "Essayez encore!"
