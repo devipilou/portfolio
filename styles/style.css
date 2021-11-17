@@ -49,6 +49,9 @@ header {
   padding-top: 80px;
   clip-path: polygon(0 0, 3% 100%, 50% 90%, 97% 100%, 100% 0);
 }
+nav img{
+  max-width: 40px;
+}
 
 
 /* Main */

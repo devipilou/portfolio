@@ -1,306 +1,241 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Visitez le portfolio de Pierre-Loup Perez - Web Developper, découvrez ses compétences et les projets qu'il à réalisé, utilisant différentes technologies Web."
-    />
-    <title>Portfolio de Pierre-Loup Perez - Web Developper</title>
-    <link
-      rel="stylesheet"
-      href="https://bootswatch.com/5/spacelab/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.36.0/tsparticles.min.js"></script>
-    <script src="js/app.js" defer></script>
-    <link rel="shortcut icon" href="/assets/favicon.ico" />
-    <link rel="icon" href="/assets/android-chrome-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-    <meta
-      name="msapplication-TileImage"
-      content="/assets/android-chrome-192x192.png"
-    />
-  </head>
-  
-  <body id="top">
-    <!-- fond particules -->
-    <div id="tsparticles"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand btn btn-light text-primary" href="index.html#top"
-          >Perez Pl</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarColor03"
-          aria-controls="navbarColor03"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Visitez le portfolio de Pierre-Loup Perez - Web Developper, découvrez ses compétences et les projets qu'il à réalisé, utilisant différentes technologies Web." />
+  <title>Portfolio de Pierre-Loup Perez - Web Developper</title>
+  <link rel="stylesheet" href="https://bootswatch.com/5/spacelab/bootstrap.min.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.36.0/tsparticles.min.js"></script>
+  <script src="js/app.js" defer></script>
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="icon" href="/assets/android-chrome-192x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="msapplication-TileImage" content="/assets/android-chrome-192x192.png" />
+</head>
 
-        <div class="collapse navbar-collapse" id="navbarColor03">
-          <ul class="navbar-nav ms-auto text-center">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">
-                Accueil
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projets.html">Projets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="presentation.html">Présentation</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cv.html">Curriculum Vitae</a>
-            </li>
-            <li class="nav-item">
-              <a href="bonus.html" class="nav-link">Bonus</a>
-            </li>
-          </ul>
-        </div>
+<body id="top">
+  <!-- fond particules -->
+  <div id="tsparticles"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="index.html">
+        <img src="/assets/android-chrome-192x192.png" alt="logo Pilou Dev">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">
+              Accueil
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projets.html">Projets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="presentation.html">Présentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cv.html">Curriculum Vitae</a>
+          </li>
+          <li class="nav-item">
+            <a href="bonus.html" class="nav-link">Bonus</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="container-fluid text-center mb-5">
-      <figure class="text-intro">
-        <blockquote class="blockquote">
-          <h1 class="mb-2 display-4">Développeur Web et Web Mobile</h1>
-        </blockquote>
-        <figcaption class="blockquote-footer text-dark">
-          Portfolio de <cite title="Source Title">Pierre-Loup Perez</cite>
-        </figcaption>
-      </figure>
-    </header>
-
-    <!-- Main -->
-    <main class="container text-center">
-      <article class="my-3 row align-items-center">
-        <h2 class="col-12 col-md-6 order-md-2">Qui suis-je?</h2>
-        <section class="col-12 col-md-6 order-md-1 justify-content-center">
-          <p>Développeur Web Fullstack Junior</p>
-          <p>Ancien Musicien-militaire reconverti</p>
-          <p>Créatif/Constructif/Curieux</p>
-          <a href="/presentation.html">en savoir plus</a>
-        </section>
-      </article>
-
-      <hr class="mx-5 bg-primary" />
-
-      <article class="my-3 row align-items-center">
-        <h2 class="col-12 col-md-6">Curriculum Vitae</h2>
-        <section class="col-12 col-md-6 justify-content-center">
-          <p>Front: Html/Css Scss/Sass Javascript Wordpress</p>
-          <p>Back: Php/mySql Laravel</p>
-          <p>Softskills: Initiatives Organisation Adaptation Autonomie</p>
-          <a href="/cv.html">en savoir plus</a>
-        </section>
-      </article>
-
-      <hr class="mx-5 bg-primary" />
-
-      <article class="row my-3 justify-content-around">
-        <section
-          class="
-            card
-            bg-primary bg-opacity-10
-            border-primary
-            col-12 col-sm-6 col-md-4
-          "
-        >
-          <img
-            class="card-img-top mt-2 border border-light"
-            src="/assets/pilou_artreduit.jpg"
-            alt="ecran d'accueil pilou_art"
-            title="Page d'accueil de Pilou_art galerie d'images"
-          />
-          <div class="card-header bg-primary bg-opacity-25 border border-light">
-            Galerie d'image
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Galerie d'art de Pilou - Art by Pilou</h3>
-            <div class="card-text">
-              <p>Projet "from scratch" Html/Scss/Javascript</p>
-              <p>
-                <small
-                  >galerie d'image pour
-                  <a href="https://www.instagram.com/pilou_art/" target="_blank"
-                    >@pilou_art</a
-                  ></small
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              card-footer
-              border border-light
-              rounded
-              bg-primary bg-opacity-25
-            "
-          >
-            <a href="/pilou_art" class="btn btn-secondary">Visitez le site</a>
-            <a href="/projets.html#pilouart" class="btn btn-light"
-              >Descriptif</a
-            >
-          </div>
-        </section>
-
-        <section
-          class="
-            card
-            bg-primary bg-opacity-10
-            border-primary
-            col-12 col-sm-6 col-md-4
-          "
-        >
-          <img
-            class="card-img-top mt-2 border border-light"
-            src="/assets/maitressegereduit.jpg"
-            alt="ecran d'accueil maitresse gé"
-            title="Page d'accueil du Blog de Maitresse Gé, Instagrameuse"
-          />
-          <div class="card-header bg-primary bg-opacity-25 border border-light">
-            Wordpress
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Le blog de Maitresse Gé</h3>
-            <div class="card-text">
-              <p>Projet "Wordpress" thème OceanWP-Elementor</p>
-              <p>
-                <small
-                  >blog de l'instagrameuse
-                  <a
-                    href="https://www.instagram.com/maitresse.ge/"
-                    target="_blank"
-                    >@maitresse.ge</a
-                  ></small
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              card-footer
-              border border-light
-              rounded
-              bg-primary bg-opacity-25
-            "
-          >
-            <a href="https://maitressege.fr" class="btn btn-secondary"
-              >Visitez le site</a
-            >
-            <a href="/projets.html#maitressege" class="btn btn-light"
-              >Descriptif</a
-            >
-          </div>
-        </section>
-
-        <section
-          class="
-            card
-            bg-primary bg-opacity-10
-            border-primary
-            col-12 col-sm-6 col-md-4
-          "
-        >
-          <img
-            class="card-img-top mt-2 border border-light"
-            src="/assets/portfolioreduit.jpg"
-            alt="ecran CV portfolio"
-            title="Page du CV de Pierre-Loup Perez - Web Developper"
-          />
-          <div class="card-header bg-primary bg-opacity-25 border border-light">
-            Portfolio
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">Portfolio de Pierre-Loup Perez</h3>
-            <div class="card-text">
-              <p>Projet "Bootstrap" de portfolio</p>
-              <p><small>présentation de mes projets terminés</small></p>
-            </div>
-          </div>
-          <div
-            class="
-              card-footer
-              border border-light
-              rounded
-              bg-primary bg-opacity-25
-            "
-          >
-            <a href="/index.html" class="btn btn-secondary">Visitez le site</a>
-            <a href="/projets.html#portfolio" class="btn btn-light"
-              >Descriptif</a
-            >
-          </div>
-        </section>
-      </article>
-
-      <hr class="mx-5 bg-primary" />
-
-      <!-- CTA -->
-      <article class="text-center alert alert-info">
-        <p>Mes projets vous plaisent? Mon profil vous intéresse?</p>
-        <p>N'hésitez plus</p>
-        <a class="btn btn-primary btn-lg" href="contact.html">Contactez-moi</a>
-      </article>
-    </main>
-
-    <div class="my-5 d-flex justify-content-end">
-      <a href="#top" class="btn btn-secondary me-5">Remonter</a>
     </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="container-fluid row text-center justify-content-center pt-3">
-      <section class="col-12 col-sm-6 col-md-4 row">
-        <h4>Où me trouver?</h4>
-        <a href="https://github.com/devipilou/devipilou" target="_blank"
-          >Github</a
-        >
-        <a href="https://www.linkedin.com/in/pierre-loup-perez" target="_blank"
-          >LinkedIn</a
-        >
-        <a href="https://scratch.mit.edu/users/AnnaEtPapa/" target="_blank"
-          >Scratch</a
-        >
+  <!-- Header -->
+  <header class="container-fluid text-center mb-5">
+    <figure class="text-intro">
+      <blockquote class="blockquote">
+        <h1 class="mb-2 display-4">Développeur Web et Web Mobile</h1>
+      </blockquote>
+      <figcaption class="blockquote-footer text-dark">
+        Portfolio de <cite title="Source Title">Pierre-Loup Perez</cite>
+      </figcaption>
+    </figure>
+  </header>
+
+  <!-- Main -->
+  <main class="container text-center">
+    <article class="my-3 row align-items-center">
+      <h2 class="col-12 col-md-6 order-md-2">Qui suis-je?</h2>
+      <section class="col-12 col-md-6 order-md-1 justify-content-center">
+        <p>Développeur Web Fullstack Junior</p>
+        <p>Ancien Musicien-militaire reconverti</p>
+        <p>Créatif/Constructif/Curieux</p>
+        <a href="/presentation.html">en savoir plus</a>
+      </section>
+    </article>
+
+    <hr class="mx-5 bg-primary" />
+
+    <article class="my-3 row align-items-center">
+      <h2 class="col-12 col-md-6">Curriculum Vitae</h2>
+      <section class="col-12 col-md-6 justify-content-center">
+        <p>Front: Html/Css Scss/Sass Javascript Wordpress</p>
+        <p>Back: Php/mySql Laravel</p>
+        <p>Softskills: Initiatives Organisation Adaptation Autonomie</p>
+        <a href="/cv.html">en savoir plus</a>
+      </section>
+    </article>
+
+    <hr class="mx-5 bg-primary" />
+
+    <article class="row my-3 justify-content-around">
+      <section class="
+            card
+            bg-primary bg-opacity-10
+            border-primary
+            col-12 col-sm-6 col-md-4
+          ">
+        <img class="card-img-top mt-2 border border-light" src="/assets/pilou_artreduit.jpg"
+          alt="ecran d'accueil pilou_art" title="Page d'accueil de Pilou_art galerie d'images" />
+        <div class="card-header bg-primary bg-opacity-25 border border-light">
+          Galerie d'image
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Galerie d'art de Pilou - Art by Pilou</h3>
+          <div class="card-text">
+            <p>Projet "from scratch" Html/Scss/Javascript</p>
+            <p>
+              <small>galerie d'image pour
+                <a href="https://www.instagram.com/pilou_art/" target="_blank">@pilou_art</a></small>
+            </p>
+          </div>
+        </div>
+        <div class="
+              card-footer
+              border border-light
+              rounded
+              bg-primary bg-opacity-25
+            ">
+          <a href="/pilou_art" class="btn btn-secondary">Visitez le site</a>
+          <a href="/projets.html#pilouart" class="btn btn-light">Descriptif</a>
+        </div>
       </section>
 
-      <section class="col-12 col-sm-6 col-md-4 row">
-        <h4>Projets à voir</h4>
-        <a href="/pilou_art/index.html" target="_blank">Galerie de Pilou_art</a>
-        <a href="https://maitressege.fr" target="_blank">Blog deMaitresse Gé</a>
+      <section class="
+            card
+            bg-primary bg-opacity-10
+            border-primary
+            col-12 col-sm-6 col-md-4
+          ">
+        <img class="card-img-top mt-2 border border-light" src="/assets/maitressegereduit.jpg"
+          alt="ecran d'accueil maitresse gé" title="Page d'accueil du Blog de Maitresse Gé, Instagrameuse" />
+        <div class="card-header bg-primary bg-opacity-25 border border-light">
+          Wordpress
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Le blog de Maitresse Gé</h3>
+          <div class="card-text">
+            <p>Projet "Wordpress" thème OceanWP-Elementor</p>
+            <p>
+              <small>blog de l'instagrameuse
+                <a href="https://www.instagram.com/maitresse.ge/" target="_blank">@maitresse.ge</a></small>
+            </p>
+          </div>
+        </div>
+        <div class="
+              card-footer
+              border border-light
+              rounded
+              bg-primary bg-opacity-25
+            ">
+          <a href="https://maitressege.fr" class="btn btn-secondary">Visitez le site</a>
+          <a href="/projets.html#maitressege" class="btn btn-light">Descriptif</a>
+        </div>
       </section>
 
-      <section class="col-12 col-sm-6 col-md-4 row">
-        <h4>Liens internes</h4>
-        <a href="contact.html">Contactez-moi</a>
-        <a href="mentions.html">Mentions Légales</a>
+      <section class="
+            card
+            bg-primary bg-opacity-10
+            border-primary
+            col-12 col-sm-6 col-md-4
+          ">
+        <img class="card-img-top mt-2 border border-light" src="/assets/portfolioreduit.jpg" alt="ecran CV portfolio"
+          title="Page du CV de Pierre-Loup Perez - Web Developper" />
+        <div class="card-header bg-primary bg-opacity-25 border border-light">
+          Portfolio
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Portfolio de Pierre-Loup Perez</h3>
+          <div class="card-text">
+            <p>Projet "Bootstrap" de portfolio</p>
+            <p><small>présentation de mes projets terminés</small></p>
+          </div>
+        </div>
+        <div class="
+              card-footer
+              border border-light
+              rounded
+              bg-primary bg-opacity-25
+            ">
+          <a href="/index.html" class="btn btn-secondary">Visitez le site</a>
+          <a href="/projets.html#portfolio" class="btn btn-light">Descriptif</a>
+        </div>
       </section>
-      <p class="col-12 mt-2">
-        &copy; <span id="annee"></span> - Pierre-Loup Perez
-      </p>
-    </footer>
+    </article>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <hr class="mx-5 bg-primary" />
+
+    <!-- CTA -->
+    <article class="text-center alert alert-info">
+      <p>Mes projets vous plaisent? Mon profil vous intéresse?</p>
+      <p>N'hésitez plus</p>
+      <a class="btn btn-primary btn-lg" href="contact.html">Contactez-moi</a>
+    </article>
+  </main>
+
+  <div class="my-5 d-flex justify-content-end">
+    <a href="#top" class="btn btn-secondary me-5">Remonter</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="container-fluid row text-center justify-content-center pt-3">
+    <section class="col-12 col-sm-6 col-md-4 row">
+      <h4>Où me trouver?</h4>
+      <a href="https://github.com/devipilou/devipilou" target="_blank">Github</a>
+      <a href="https://www.linkedin.com/in/pierre-loup-perez" target="_blank">LinkedIn</a>
+      <a href="https://scratch.mit.edu/users/AnnaEtPapa/" target="_blank">Scratch</a>
+    </section>
+
+    <section class="col-12 col-sm-6 col-md-4 row">
+      <h4>Projets à voir</h4>
+      <a href="/pilou_art/index.html" target="_blank">Galerie de Pilou_art</a>
+      <a href="https://maitressege.fr" target="_blank">Blog deMaitresse Gé</a>
+    </section>
+
+    <section class="col-12 col-sm-6 col-md-4 row">
+      <h4>Liens internes</h4>
+      <a href="contact.html">Contactez-moi</a>
+      <a href="mentions.html">Mentions Légales</a>
+    </section>
+    <p class="col-12 mt-2">
+      &copy; <span id="annee"></span> - Pierre-Loup Perez
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+</body>
+
 </html>
