@@ -82,11 +82,11 @@ function affichageBtn(){
 
     if((controleValidation['name'] === 1) && (controleValidation['mail'] === 1) && (controleValidation['message'] === 1)){
         btnSub.classList.remove('disabled')
-        btnSub.classList.add('btn-lg')
+        btnSub.classList.add('btn-lg', 'shadow')
         messSub.style.display = "none";
     }else{
         btnSub.classList.add('disabled')
-        btnSub.classList.remove('btn-lg')
+        btnSub.classList.remove('btn-lg', 'shadow')
         messSub.style.display = "inline";
     }
 };
