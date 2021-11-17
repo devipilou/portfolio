@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /.vscode/
+Disallow: .gitmodules
+Sitemap: https://perezpl.fr/sitemap.xml
