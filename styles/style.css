@@ -46,7 +46,7 @@ a{
 /* header */
 header {
   min-height: 250px;
-  padding-top: 80px;
+  padding-top: 10px;
   clip-path: polygon(0 0, 3% 100%, 50% 90%, 97% 100%, 100% 0);
 }
 nav img{
@@ -79,6 +79,11 @@ article{
 .message-alerte{
   display: none;
 }
+.logo80{
+  width: 80px;
+  border: 1px solid #446e9b;
+}
+
 
 /* Footer */
 footer{
