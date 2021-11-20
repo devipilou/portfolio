@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contenu Bonus du portfolio de Pierre-Loup Perez - Web Developper, jeux vidéos, bravo vous avez trouvé la page la plus fun.">
-    <title>Bonus Page - Pierre-Loup Perez - Web Developper</title>
+    <meta name="description" content="Jeu vidéo de Snake - mobile compatible, et de difficulté croissante. Exercice Javascript à l'aide du tutoriel d'Enzo Ustariz completé par mes soins">
+    <title>Super Blitz - Bonus Page - Pierre-Loup Perez - Web Developper</title>
     <link
       rel="stylesheet"
       href="https://bootswatch.com/5/spacelab/bootstrap.min.css"
@@ -73,52 +73,35 @@
       <img src="/assets/android-chrome-192x192.png" alt="logo pilou dev web" class="logo80">
        <figure class="text-intro">
          <blockquote class="blockquote">
-           <h1 class="mb-2 display-4">Bonus</h1>
+           <h1 class="mb-2 display-4">Super Blitz</h1>
          </blockquote>
          <figcaption class="blockquote-footer text-dark">
-           <cite title="Source Title">jeux</cite>
+           <cite title="Source Title">bonus</cite>
          </figcaption>
        </figure>
      </header>
 
      
      <!-- Main -->
-     <main class="container text-center">
-       <article class="text-center alert alert-secondary shadow">
-         <h2>Bravo</h2>
-         <p>Vous etes arrivés sur la page la plus intéressante du site.</p>
-         <p>Vous pourrez trouver ici, un jeu pour l'instant, mais j'espère assez vite pouvoir vous en proposer plus</p>
-         <p><strong>Amusez-vous bien!!</strong></p>
-        </article>
+     <main class="container">
+       
+      <article id="blitz" class="text-center">
+        <canvas id="canvasBlitz" width="320" height="300"></canvas>
+        <p>Score = <span id="score">0</span></p>
+        <p><small class="text-secondary">ps: mon record est <span id="recordBlitz"></span></small></p>
+        <div id="messageBlitz"></div>
+        <button class="btn btn-secondary" id="startBlitz">Commencer</button>
+      </article>
 
-        <hr class="mx-5 bg-primary my-5">
+      <hr class="mx-5 bg-primary my-5">
 
-        <article id="snake">
-            <h3><img src="/assets/favicon.ico" alt="mini-logo" class="icone"> Le Mythique "SNAKE"</h3>
-            <img src="/assets/snake.jpg" alt="jeu snake"class="img-fluid mb-3 shadow" title="écran type du jeu de Snake">
-            <p>Un gameplay inventé en 1976 avec le jeu Blockade, que l'on retrouve dans des jeux comme Worm en 1978, Tron et Nibbler en 1982.</p>
-            <p>Il est également connu pour les différentes version de Snake parues à partir de 1997 sur Nokia 6610</p>
-            <a class="btn btn-secondary" href="snake.html">Essayer le jeu</a>
-            <a class="btn btn-light" href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)">Historique du jeu</a>
-        </article>
+      <article class="text-center">
+        <p>Le jeu se joue au click dans le cadre, cela déclenche la chute d'une bombe.</p>
+        <p>Le but est de détruire tous les immeubles avant que l'avion ne les percute.</p>
+        <p>Une nouvelle bombe est chargée dès que la première a terminé sa chute.</p>
+      </article>
 
-        <hr class="mx-5 bg-primary my-5">
-
-        <article id="blitz">
-          <h3><img src="/assets/favicon.ico" alt="mini-logo" class="icone"> SUPER BLITZ</h3>
-          <img src="/assets/blitz.jpg" alt="jeu blitz"class="img-fluid mb-3 shadow" title="écran type du jeu de Blitz">
-          <p>Basé sur le gameplay d'un jeu sorti en 1983 sur Commodore64</p>
-          <p>Le jeu est jouable, mais il me reste encore à travailler les graphismes, et à ajouter le passage du gorille sur les immeubles</p>
-          <a class="btn btn-secondary" href="blitz.html">Essayer le jeu</a>
-          <a class="btn btn-light" href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)">Historique du jeu</a>
-        </article>
-      
-        
     </main>
-
-    <div class="my-5 d-flex justify-content-end">
-      <a href="#top" class="btn btn-secondary me-5 shadow">Remonter</a>
-    </div>
 
    <!-- Footer -->
    <footer class="container-fluid row text-center justify-content-center pt-3">
@@ -155,6 +138,6 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="/js/snake.js"></script> -->
+    <script src="/js/blitz.js"></script>
   </body>
 </html>

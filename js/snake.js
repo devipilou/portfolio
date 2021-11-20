@@ -56,6 +56,7 @@ function annimation(){
 }
 annimation();
 creerPomme();
+dessineLeSerpent();
 
 function nettoieCanvas(){
 
@@ -113,7 +114,6 @@ function faireAvancerSerpent() {
     }
 }
 
-dessineLeSerpent();
 
 
 document.addEventListener('keydown', changerDirection);
