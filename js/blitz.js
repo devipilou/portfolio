@@ -124,7 +124,7 @@ function faireAvancerAvion() {
 // Création des colonnes d'immeuble
 function creerImmeubles() {
     for (let immeuble = 5; immeuble < 27; immeuble++) {
-        let nbEtages = Math.floor((Math.random() * 30) + 1);
+        let nbEtages = Math.floor((Math.random() * 12) + 1);
         creerEtages(nbEtages, immeuble * 10);
     }
 }
