@@ -1,7 +1,7 @@
 const canvas = document.querySelector('#canvasBlitz');
 const ctx = canvas.getContext('2d');
 const message = document.querySelector('#messageBlitz');
-const monRecord = 940;
+const monRecord = 3818;
 const btnStart = document.querySelector('#startBlitz');
 const record = document.querySelector('#recordBlitz');
 record.innerHTML = monRecord;
@@ -30,10 +30,24 @@ let stopGame = false;
 let score = 0;
 
 
-
+initialisation();
 // Début du jeu
 btnStart.addEventListener('click', demarrerBlitz);
-nettoieCanvas();
+
+function initialisation() {
+    nettoieCanvas();
+    avion = {
+        x: 330,
+        y: 10
+    };
+    stopGame = false;
+    score = 0;
+    charge = true;
+    interval = 100;
+    immeubles = [];
+    avancee = true;
+
+}
 
 function demarrerBlitz() {
     dessinerAvion();
@@ -49,7 +63,7 @@ function annimation() {
         return;
     } else {
 
-        setTimeout(function () {
+        const timeOut = setTimeout(function () {
             nettoieCanvas();
             dessinerEtages();
 
@@ -62,8 +76,6 @@ function annimation() {
             dessinerAvion();
             faireAvancerBombe();
             dessinerBombe();
-
-            // destruction();
 
             // recursion
             annimation();
@@ -88,10 +100,18 @@ function dessinerAvion() {
     ctx.fillStyle = "#446e9b";
     ctx.strokeStyle = "black";
     ctx.beginPath();
-    ctx.moveTo(avion.x + 10, avion.y);
-    ctx.lineTo(avion.x + 10, avion.y + 10);
-    ctx.lineTo(avion.x, avion.y + 5);
-    ctx.lineTo(avion.x + 10, avion.y);
+    ctx.moveTo(avion.x + 12, avion.y);
+    ctx.lineTo(avion.x + 10, avion.y + 2);
+    ctx.lineTo(avion.x + 8, avion.y + 4);
+    ctx.lineTo(avion.x + 2, avion.y + 5);
+    ctx.lineTo(avion.x - 2, avion.y + 6);
+    ctx.lineTo(avion.x + 2, avion.y + 7);
+    ctx.lineTo(avion.x + 10, avion.y + 8);
+    // ctx.lineTo(avion.x + 12, avion.y);
+
+    // ctx.lineTo(avion.x + 10, avion.y + 10);
+    // ctx.lineTo(avion.x, avion.y + 5);
+    // ctx.lineTo(avion.x + 10, avion.y);
     ctx.closePath();
     ctx.stroke();
     ctx.fill();
@@ -145,10 +165,39 @@ function dessinerEtages() {
 
     for (let etage of immeubles) {
 
-        ctx.fillStyle = "#999999";
-        ctx.strokeStyle = "black";
-        ctx.fillRect(etage.x, etage.y, 10, 10);
-        ctx.strokeRect(etage.x, etage.y, 10, 10);
+
+        if (!(bombe.x == etage.x && bombe.y == etage.y - 10)) {
+
+            // dessin normal
+            ctx.fillStyle = "#999999";
+            ctx.strokeStyle = "#333333";
+            ctx.fillRect(etage.x, etage.y, 10, 10);
+            ctx.strokeRect(etage.x, etage.y, 10, 10);
+
+            ctx.fillStyle = '#eeeeee';
+            ctx.fillRect(etage.x + 2, etage.y + 2, 6, 1);
+            ctx.fillRect(etage.x + 2, etage.y + 4, 6, 1);
+            ctx.fillRect(etage.x + 2, etage.y + 6, 6, 1);
+            ctx.fillRect(etage.x + 2, etage.y + 8, 6, 1);
+
+        } else {
+
+            // dessin des explosions
+            ctx.fillStyle = "#cd0200";
+            ctx.strokeStyle = "#333333";
+            // ctx.fillRect(etage.x - 2, etage.y + 5, 14, 5);
+            // ctx.strokeRect(etage.x - 2, etage.y + 5, 14, 5);
+            ctx.beginPath()
+            ctx.moveTo(etage.x - 3, etage.y - 5);
+            ctx.lineTo(etage.x + 5, etage.y + 8);
+            ctx.lineTo(etage.x + 13, etage.y - 5);
+            ctx.lineTo(etage.x + 11, etage.y + 10);
+            ctx.lineTo(etage.x - 1, etage.y + 10);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fill();
+
+        }
 
     }
 }
@@ -166,13 +215,15 @@ function placeBombe() {
 //affichage de la bombe
 
 function dessinerBombe() {
-    ctx.fillStyle = "#cd0200";
-    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#999999";
+    ctx.strokeStyle = "#333333";
     ctx.beginPath();
-    ctx.moveTo(bombe.x + 2, bombe.y);
+    ctx.moveTo(bombe.x + 3, bombe.y);
+    ctx.moveTo(bombe.x + 3, bombe.y + 7);
     ctx.lineTo(bombe.x + 5, bombe.y + 10);
-    ctx.lineTo(bombe.x + 8, bombe.y);
-    ctx.lineTo(bombe.x + 2, bombe.y);
+    ctx.lineTo(bombe.x + 7, bombe.y + 7);
+    ctx.lineTo(bombe.x + 7, bombe.y);
+    ctx.lineTo(bombe.x + 3, bombe.y);
     ctx.closePath();
     ctx.stroke();
     ctx.fill();
@@ -191,7 +242,7 @@ function destruction() {
         if (bombe.x == etage.x && bombe.y == etage.y) {
             let index = immeubles.indexOf(etage);
             immeubles.splice(index, 1);
-            score += (300 - bombe.y) / 10;
+            score += (300 - avion.y) / 10;
         }
         if (bombe.y >= 300) {
             bombe = {};
@@ -202,12 +253,19 @@ function destruction() {
     }
 }
 
+
+
 //fin du jeu perdu
 function finPerdu() {
     for (let etage of immeubles) {
         if (avion.x == (etage.x + 10) && avion.y == etage.y) {
             stopGame = true;
-            message.innerHTML = `Dommage!! Vous avez perdu avec un score de <span id="score2"></span>`;
+            bombe = {};
+            if(score > monRecord){
+                message.innerHTML = `Dommage!! Vous avez perdu avec un score de <span id="score2"></span><br>C'est dommage vous aviez battu mon record`;
+            }else{
+                message.innerHTML = `Dommage!! Vous avez perdu avec un score de <span id="score2"></span><br>Entrainez-vous encore pour battre mon record`;
+            }
             recommencer();
         }
     }
@@ -219,11 +277,16 @@ function finPerdu() {
 function finGagne() {
     if (immeubles.length == 0) {
         stopGame = true;
+        bombe = {};
         score += 500 - avion.y;
         document.querySelector('#score').innerHTML = score;
-        message.innerHTML = `Bravo vous avez terminé le jeu avec un score de <span id="score2"></span>`
+        if(score > monRecord){
+            message.innerHTML = `Bravo vous avez terminé le jeu avec un score de <span id="score2"></span><br>Et vous avez également battu mon record`
+        }else{
+            message.innerHTML = `Bravo vous avez terminé le jeu avec un score de <span id="score2"></span><br>Mais entrainez-vous encore pour battre mon record`
+        }
         recommencer();
-        
+
     }
 }
 
@@ -233,6 +296,9 @@ function recommencer() {
     btnStart.classList.remove('disabled');
     btnStart.addEventListener('click', () => {
         document.location.reload(true);
+        // nettoieCanvas();
+        // initialisation();
+        // demarrerBlitz();
     })
 
 }

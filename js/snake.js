@@ -2,7 +2,7 @@
 const canvas = document.querySelector('#canvasSnake');
 const ctx = canvas.getContext('2d');
 const message = document.querySelector('#messageSnake');
-const monRecord = 500;
+const monRecord = 550;
 
 const record = document.querySelector('#record');
 record.innerHTML = monRecord;
