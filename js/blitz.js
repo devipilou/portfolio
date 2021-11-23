@@ -65,7 +65,6 @@ function annimation() {
 
         const timeOut = setTimeout(function () {
             nettoieCanvas();
-            dessinerEtages();
 
             if (avancee) {
                 faireAvancerAvion();
@@ -73,7 +72,9 @@ function annimation() {
             } else {
                 avancee = true;
             }
+            dessinerLumieres();
             dessinerAvion();
+            dessinerEtages();
             faireAvancerBombe();
             dessinerBombe();
 
@@ -89,16 +90,18 @@ function annimation() {
 // rafraichissement du canvas
 function nettoieCanvas() {
 
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "#343a40";
+    ctx.fillRect(0, 0, canvas.clientWidth, canvas.height - 20);
+    ctx.fillStyle = "#495057";
+    ctx.fillRect(0, canvas.height - 20, canvas.clientWidth, 20);
     ctx.strokeStyle = "black";
-    ctx.fillRect(0, 0, canvas.clientWidth, canvas.height);
     ctx.strokeRect(0, 0, canvas.clientWidth, canvas.height);
 }
 
 // Dessin de l'avion
 function dessinerAvion() {
-    ctx.fillStyle = "#446e9b";
-    ctx.strokeStyle = "black";
+    ctx.fillStyle = "#adb5bd";
+    ctx.strokeStyle = "#212529";
     ctx.beginPath();
     ctx.moveTo(avion.x + 12, avion.y);
     ctx.lineTo(avion.x + 10, avion.y + 2);
@@ -169,12 +172,12 @@ function dessinerEtages() {
         if (!(bombe.x == etage.x && bombe.y == etage.y - 10)) {
 
             // dessin normal
-            ctx.fillStyle = "#999999";
-            ctx.strokeStyle = "#333333";
+            ctx.fillStyle = "#495057";
+            ctx.strokeStyle = "#212529";
             ctx.fillRect(etage.x, etage.y, 10, 10);
             ctx.strokeRect(etage.x, etage.y, 10, 10);
 
-            ctx.fillStyle = '#eeeeee';
+            ctx.fillStyle = '#adb5bd';
             ctx.fillRect(etage.x + 2, etage.y + 2, 6, 1);
             ctx.fillRect(etage.x + 2, etage.y + 4, 6, 1);
             ctx.fillRect(etage.x + 2, etage.y + 6, 6, 1);
@@ -183,8 +186,8 @@ function dessinerEtages() {
         } else {
 
             // dessin des explosions
-            ctx.fillStyle = "#cd0200";
-            ctx.strokeStyle = "#333333";
+            ctx.fillStyle = "#d8f3dc";
+            ctx.strokeStyle = "#081c15";
             // ctx.fillRect(etage.x - 2, etage.y + 5, 14, 5);
             // ctx.strokeRect(etage.x - 2, etage.y + 5, 14, 5);
             ctx.beginPath()
@@ -215,8 +218,8 @@ function placeBombe() {
 //affichage de la bombe
 
 function dessinerBombe() {
-    ctx.fillStyle = "#999999";
-    ctx.strokeStyle = "#333333";
+    ctx.fillStyle = "#adb5bd";
+    ctx.strokeStyle = "#212529";
     ctx.beginPath();
     ctx.moveTo(bombe.x + 3, bombe.y);
     ctx.moveTo(bombe.x + 3, bombe.y + 7);
@@ -253,7 +256,31 @@ function destruction() {
     }
 }
 
+// Annimation des lumières
+function dessinerLumieres() {
 
+    ctx.fillStyle = "#212529";
+    ctx.fillRect(20, 290, 10, 10);
+    ctx.fillRect(290, 290, 10, 10);
+    if(avion.y < 290){
+        ctx.fillStyle = "#6c757d";
+        ctx.beginPath();
+        ctx.moveTo(25, 290);
+        ctx.lineTo(avion.x - 10, avion.y);
+        ctx.arc(avion.x + 5, avion.y, 15, 0, 1.9 * Math.PI);
+        ctx.lineTo(avion.x + 20, avion.y);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(295, 290);
+        ctx.lineTo(avion.x - 10, avion.y);
+        ctx.lineTo(avion.x + 20, avion.y);
+        ctx.closePath();
+        ctx.fill();
+
+    }
+};
 
 //fin du jeu perdu
 function finPerdu() {
@@ -261,9 +288,9 @@ function finPerdu() {
         if (avion.x == (etage.x + 10) && avion.y == etage.y) {
             stopGame = true;
             bombe = {};
-            if(score > monRecord){
+            if (score > monRecord) {
                 message.innerHTML = `Dommage!! Vous avez perdu avec un score de <span id="score2"></span><br>C'est dommage vous aviez battu mon record`;
-            }else{
+            } else {
                 message.innerHTML = `Dommage!! Vous avez perdu avec un score de <span id="score2"></span><br>Entrainez-vous encore pour battre mon record`;
             }
             recommencer();
@@ -280,9 +307,9 @@ function finGagne() {
         bombe = {};
         score += 500 - avion.y;
         document.querySelector('#score').innerHTML = score;
-        if(score > monRecord){
+        if (score > monRecord) {
             message.innerHTML = `Bravo vous avez terminé le jeu avec un score de <span id="score2"></span><br>Et vous avez également battu mon record`
-        }else{
+        } else {
             message.innerHTML = `Bravo vous avez terminé le jeu avec un score de <span id="score2"></span><br>Mais entrainez-vous encore pour battre mon record`
         }
         recommencer();
