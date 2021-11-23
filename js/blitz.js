@@ -12,6 +12,7 @@ let avion = {
 };
 let immeubles = [];
 let bombe = {};
+let coef;
 
 // variables
 // vitesse
@@ -51,7 +52,12 @@ function initialisation() {
 
 function demarrerBlitz() {
     dessinerAvion();
-    creerImmeubles();
+    while (immeubles.length < 100) {
+        immeubles = [];
+        creerImmeubles();
+    }
+    coef = (264 - immeubles.length) / 100;
+    console.log(immeubles.length, coef);
     annimation();
     btnStart.classList.add('disabled');
     canvas.addEventListener('click', placeBombe);
@@ -188,8 +194,6 @@ function dessinerEtages() {
             // dessin des explosions
             ctx.fillStyle = "#d8f3dc";
             ctx.strokeStyle = "#081c15";
-            // ctx.fillRect(etage.x - 2, etage.y + 5, 14, 5);
-            // ctx.strokeRect(etage.x - 2, etage.y + 5, 14, 5);
             ctx.beginPath()
             ctx.moveTo(etage.x - 3, etage.y - 5);
             ctx.lineTo(etage.x + 5, etage.y + 8);
@@ -262,7 +266,7 @@ function dessinerLumieres() {
     ctx.fillStyle = "#212529";
     ctx.fillRect(20, 290, 10, 10);
     ctx.fillRect(290, 290, 10, 10);
-    if(avion.y < 290){
+    if (avion.y < 290) {
         ctx.fillStyle = "#6c757d";
         ctx.beginPath();
         ctx.moveTo(25, 290);
@@ -288,10 +292,12 @@ function finPerdu() {
         if (avion.x == (etage.x + 10) && avion.y == etage.y) {
             stopGame = true;
             bombe = {};
+            score += 500 - avion.y;
+            score = Math.floor(score * coef);
             if (score > monRecord) {
-                message.innerHTML = `Dommage!! Vous avez perdu avec un score de <span id="score2"></span><br>C'est dommage vous aviez battu mon record`;
+                message.innerHTML = `Dommage !! Vous avez perdu avec un score de <span id="score2"></span><br>C'est dommage vous aviez battu mon record`;
             } else {
-                message.innerHTML = `Dommage!! Vous avez perdu avec un score de <span id="score2"></span><br>Entrainez-vous encore pour battre mon record`;
+                message.innerHTML = `Dommage !! Vous avez perdu avec un score de <span id="score2"></span><br>Entrainez-vous encore pour battre mon record`;
             }
             recommencer();
         }
@@ -306,11 +312,12 @@ function finGagne() {
         stopGame = true;
         bombe = {};
         score += 500 - avion.y;
+        score = Math.floor(score * coef);
         document.querySelector('#score').innerHTML = score;
         if (score > monRecord) {
-            message.innerHTML = `Bravo vous avez terminé le jeu avec un score de <span id="score2"></span><br>Et vous avez également battu mon record`
+            message.innerHTML = `Bravo !! Vous avez terminé le jeu avec un score de <span id="score2"></span><br>Et vous avez également battu mon record`
         } else {
-            message.innerHTML = `Bravo vous avez terminé le jeu avec un score de <span id="score2"></span><br>Mais entrainez-vous encore pour battre mon record`
+            message.innerHTML = `Bravo !! Vous avez terminé le jeu avec un score de <span id="score2"></span><br>Mais entrainez-vous encore pour battre mon record`
         }
         recommencer();
 
