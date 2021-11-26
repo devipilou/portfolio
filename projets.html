@@ -28,7 +28,7 @@
   <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand ms-3" href="index.html">
-        <img src="/assets/android-chrome-192x192.png" alt="logo Pilou Dev">
+        <img src="/assets/android-chrome-192x192.png" alt="logo Pilou Dev" class="border border-primary">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
         aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,11 +106,11 @@
       <section class="titreProj col-12 text-center">
         <h2>Mon Portfolio</h2>
       </section>
-      <section class="imgProj col-12 col-md-6">
+      <section class="imgProj col-12 col-lg-6">
         <img class="img-fluid border border-primary rounded" src="/assets/portfolio.jpg" alt="ecran CV portfolio"
-        title="Page du CV de Pierre-Loup Perez - Web Developper">
+          title="Page du CV de Pierre-Loup Perez - Web Developper">
       </section>
-      <section class="txtProj col-12 col-md-6 row">
+      <section class="txtProj col-12 col-lg-6 mt-1">
         <h3>
           <img src="/assets/favicon.ico" alt="mini-logo" class="icone">
           Projet Bootstrap et Js
@@ -122,9 +122,12 @@
         <p>Le fond de page est une animation Js a l'aide de la librtairie <a
             href="https://particles.js.org/">tsParticles</a>.</p>
         <p>C'est le site sur lequel vous naviguez actuellement.</p>
-        <p><span class="badge rounded-pill bg-secondary">Dernier ajout</span> Page Bonus et jeu en JS</p>
-
-        <a href="https://perezpl.fr" class="btn btn-secondary">Revenir à l'accueil</a>
+        <p><small><span class="badge rounded-pill bg-secondary">Dernier ajout</span> Deuxième jeu en JS et amélioration
+          graphique avec plus de cohérence visuelle</small></p>
+        <div class="row justify-content-evenly">
+          <a href="https://perezpl.fr" class="btn btn-secondary col-12 col-md-5">Revenir à l'accueil</a>
+          <a href="https://github.com/devipilou/portfolio" target="_blank" class="btn btn-light col-12 col-md-5">Code source du site</a>
+        </div>
       </section>
     </article>
 
@@ -133,7 +136,11 @@
       <section class="titreProj col-12 text-center">
         <h2>Blog de MaitresseGe</h2>
       </section>
-      <section class="txtProj col-12 col-md-6 row">
+      <section class="imgProj col-12 col-lg-6 order-lg-2">
+        <img class="img-fluid border border-primary rounded" src="/assets/maitressege.jpg"
+          alt="ecran accueil maitressege" title="Page d'accueil du Blog de Maitresse Gé, Instagrameuse">
+      </section>
+      <section class="txtProj col-12 col-lg-6 mt-1 d-grid">
         <h3>
           <img src="/assets/favicon.ico" alt="mini-logo" class="icone">
           Projet Wordpress
@@ -146,14 +153,9 @@
           gérer les envois de mail depuis le formulaire.</p>
         <p>C'est le blog dans lequel l'instagrameuse <a href="https://www.instagram.com/maitresse.ge/"
             target="_blank">@maitresse.ge</a> partage ses ateliers avec d'autres enseignants de cycle 2.</p>
-        <p><span class="badge rounded-pill bg-secondary">Dernier ajout</span> Remplissage en cours avec les articles de
-          l'ancien blog</p>
+        <p><small><span class="badge rounded-pill bg-secondary">Dernier ajout</span> Renforcement de la sécurité des accès du site</small></p>
 
         <a href="https://maitressege.fr" target="_blank" class="btn btn-secondary">Visitez le site</a>
-      </section>
-      <section class="imgProj col-12 col-md-6">
-        <img class="img-fluid border border-primary rounded" src="/assets/maitressege.jpg"
-          alt="ecran accueil maitressege" title="Page d'accueil du Blog de Maitresse Gé, Instagrameuse">
       </section>
     </article>
 
@@ -162,11 +164,11 @@
       <section class="titreProj col-12 text-center">
         <h2>Galerie de Pilou_art</h2>
       </section>
-      <section class="imgProj col-12 col-md-6">
+      <section class="imgProj col-12 col-lg-6">
         <img class="img-fluid border border-primary rounded" src="/assets/pilou_art.jpg" alt="ecran accueil pilou_art"
           title="Page d'accueil de Pilou_art galerie d'images">
       </section>
-      <section class="txtProj col-12 col-md-6 row">
+      <section class="txtProj col-12 col-lg-6 mt-1">
         <h3>
           <img src="/assets/favicon.ico" alt="mini-logo" class="icone">
           Projet "from scratch" avec Scss et Js
@@ -177,10 +179,12 @@
           Sass/scss. Les animations du menu sont en Javascript.</p>
         <p>Il est installé en tant que sous-domaine du site actuel, et est géré comme sous-module de ce dernier avec Git
         </p>
-        <p><span class="badge rounded-pill bg-secondary">Dernier ajout</span> Correction de l'erreur d'animation des
-          lettres du menu</p>
+        <p><small><span class="badge rounded-pill bg-secondary">Dernier ajout</span> Refonte de la chartre graphique pour éclaircir un peu</small></p>
 
-        <a href="https://perezpl.fr/pilou_art/" target="_blank" class="btn btn-secondary">Visitez le site</a>
+        <div class="row justify-content-evenly">
+          <a href="https://perezpl.fr/pilou_art/" target="_blank" class="btn btn-secondary col-12 col-md-5">Visitez le site</a>
+          <a href="https://github.com/devipilou/pilou_art" target="_blank" class="btn btn-light col-12 col-md-5">Code source du site</a>
+        </div>
       </section>
     </article>
 
