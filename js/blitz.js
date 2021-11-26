@@ -1,7 +1,7 @@
 const canvas = document.querySelector('#canvasBlitz');
 const ctx = canvas.getContext('2d');
 const message = document.querySelector('#messageBlitz');
-const monRecord = 3958;
+const monRecord = 4047;
 const btnStart = document.querySelector('#startBlitz');
 const record = document.querySelector('#recordBlitz');
 record.innerHTML = monRecord;
