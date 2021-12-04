@@ -1,7 +1,7 @@
 const canvas = document.querySelector('#canvasBlitz');
 const ctx = canvas.getContext('2d');
 const message = document.querySelector('#messageBlitz');
-const monRecord = 4047;
+const monRecord = 4415;
 const btnStart = document.querySelector('#startBlitz');
 const record = document.querySelector('#recordBlitz');
 record.innerHTML = monRecord;
@@ -13,10 +13,13 @@ let avion = {
 let immeubles = [];
 let bombe = {};
 let coef;
+let nuages = [];
+
 
 // variables
 // vitesse
 let interval = 100;
+let intervalMin = 0;
 
 // avancée de l'avion
 let avancee = true;
@@ -51,6 +54,12 @@ function initialisation() {
 }
 
 function demarrerBlitz() {
+    creerNuage()
+
+    dessinerNuage();
+
+
+
     dessinerAvion();
     while (immeubles.length < 100) {
         immeubles = [];
@@ -71,6 +80,17 @@ function annimation() {
 
         const timeOut = setTimeout(function () {
             nettoieCanvas();
+            if (intervalMin > 1000){
+                for (let nuage of nuages) {
+                    faireAvancerNuage(nuage);
+                    
+                }
+                intervalMin = 0;
+            }
+
+            for (let nuage of nuages) {
+                dessinerNuage(nuage);
+            }
 
             if (avancee) {
                 faireAvancerAvion();
@@ -83,6 +103,8 @@ function annimation() {
             dessinerEtages();
             faireAvancerBombe();
             dessinerBombe();
+
+            intervalMin += interval;
 
             // recursion
             annimation();
@@ -335,4 +357,70 @@ function recommencer() {
         // demarrerBlitz();
     })
 
+}
+
+//création du tableau de nuages, nombre de bulles
+function creerNuage() {
+    let nbNuages = Math.floor(Math.random() * 5) + 5;
+    for (let i = 0; i < nbNuages; i++) {
+        let nuage = [];
+        let nbBulles = Math.round(Math.random() * 10) + 10;
+        let bulleCentre = {
+            x: (Math.round(Math.random() * 36) - 2) * 10,
+            y: (Math.round(Math.random() * 10) + 1) * 10,
+            r: 10
+        };
+        nuage.push(bulleCentre);
+        for (let i = 0; i < nbBulles; i++) {
+            let bulle = {
+                x: nuage[0].x + (Math.random() * 50) - 25,
+                y: nuage[0].y + (Math.random() * 20) - 10,
+                r: (Math.random() + 1) * 10
+            }
+            nuage.push(bulle);
+        }
+        nuages.push(nuage)
+    }
+
+
+};
+
+function dessinerNuage(nuage) {
+    for (let nuage of nuages) {
+        ctx.fillStyle = "#495057";
+        for (let bulle of nuage) {
+            ctx.beginPath();
+            ctx.arc(bulle.x, bulle.y, bulle.r, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+
+    }
+
+};
+
+function faireAvancerNuage(nuage) {
+    let random = Math.random();
+    // console.log(random);
+    if (random > 0.3) {
+        for (let bulle of nuage) {
+            bulle.x += 10;
+        }
+    }
+    let controle = 0;
+    for (let bulle of nuage) {
+        if (bulle.x >= 330) {
+            controle += 1;
+        }
+    }
+    if (controle >= nuage.length - 1) {
+        reinitialiserNuage(nuage);
+        return;
+    }
+
+}
+
+function reinitialiserNuage(nuage) {
+    for (let bulle of nuage) {
+        bulle.x -= 350;
+    }
 }
