@@ -57,6 +57,7 @@ function demarrerBlitz() {
     creerNuage()
 
     dessinerNuage();
+    afficherRecharge();
 
 
 
@@ -80,10 +81,10 @@ function annimation() {
 
         const timeOut = setTimeout(function () {
             nettoieCanvas();
-            if (intervalMin > 1000){
+            if (intervalMin > 1000) {
                 for (let nuage of nuages) {
                     faireAvancerNuage(nuage);
-                    
+
                 }
                 intervalMin = 0;
             }
@@ -103,6 +104,7 @@ function annimation() {
             dessinerEtages();
             faireAvancerBombe();
             dessinerBombe();
+            afficherRecharge();
 
             intervalMin += interval;
 
@@ -122,6 +124,7 @@ function nettoieCanvas() {
     ctx.fillRect(0, 0, canvas.clientWidth, canvas.height - 20);
     ctx.fillStyle = "#495057";
     ctx.fillRect(0, canvas.height - 20, canvas.clientWidth, 20);
+
     ctx.strokeStyle = "black";
     ctx.strokeRect(0, 0, canvas.clientWidth, canvas.height);
 }
@@ -423,4 +426,33 @@ function reinitialiserNuage(nuage) {
     for (let bulle of nuage) {
         bulle.x -= 350;
     }
+}
+
+function afficherRecharge() {
+    let recharge = {
+        x: 300,
+        y: 305
+    }
+
+    ctx.strokeStyle = "black";
+    ctx.strokeRect(255, 300, 75, 20);
+    
+    if (charge) {
+        ctx.fillStyle = "#adb5bd";
+    } else {
+        ctx.fillStyle = "#343a40";
+    }
+    ctx.strokeStyle = "#212529";
+    ctx.font = "10px Arial";
+    ctx.fillText("Chargé", 260, 313);
+    ctx.beginPath();
+    ctx.moveTo(recharge.x + 3, recharge.y);
+    ctx.moveTo(recharge.x + 3, recharge.y + 7);
+    ctx.lineTo(recharge.x + 5, recharge.y + 10);
+    ctx.lineTo(recharge.x + 7, recharge.y + 7);
+    ctx.lineTo(recharge.x + 7, recharge.y);
+    ctx.lineTo(recharge.x + 3, recharge.y);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
 }
