@@ -64,6 +64,9 @@ nav img{
 .icone{
   max-height: 50px;
 }
+.mini-logo{
+  max-height: 35px;
+}
 
 article{
   margin: 1em 0;
